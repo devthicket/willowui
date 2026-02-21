@@ -1,0 +1,26 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click", "x": 40, "y": 92},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "action-save"},
+
+    {"action": "click", "x": 40, "y": 160},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "toggle-bold-on"},
+
+    {"action": "click", "x": 40, "y": 160},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "toggle-bold-off"},
+
+    {"action": "click", "x": 92, "y": 230},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "radio-pencil"},
+
+    {"action": "click", "x": 128, "y": 230},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "radio-brush"}
+  ]
+}

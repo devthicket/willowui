@@ -1,0 +1,78 @@
+{
+    "variants": ["card", "surface", "heading", "muted", "badge-ok", "badge-warn", "badge-err"],
+    "colors": {
+        "fg":         "#D4D4D4",
+        "fgMuted":    "#9E9E9E",
+        "bg":         "#12141A",
+        "surface1":   "#1A1C22",
+        "surface2":   "#222530",
+        "border":     "#2E3340",
+        "accent":     "#7AB3FF",
+        "ok":         "#5DBB7A",
+        "okBg":       "#1A3025",
+        "okBorder":   "#2E5C3E",
+        "warn":       "#E8A838",
+        "warnBg":     "#2E2010",
+        "warnBorder": "#5C3E10",
+        "err":        "#E85555",
+        "errBg":      "#2E1010",
+        "errBorder":  "#5C2020",
+        "disabled":   "rgba(90, 90, 96, 0.5)"
+    },
+    "components": {
+        "_": {
+            "borderWidth": 1
+        },
+        "button": {
+            "_": {
+                "cornerRadius": 6,
+                "padding": { "top": 6, "right": 14, "bottom": 6, "left": 14 }
+            },
+            "primary": {
+                "backgroundColor": { "default": "$surface2", "hover": "#2A2E3A", "disabled": "$disabled" },
+                "textColor":       { "default": "$fg" },
+                "borderColor":     { "default": "$border" }
+            }
+        },
+        "label": {
+            "primary": {
+                "textColor": { "default": "$fg" }
+            },
+            "heading": {
+                "textColor": { "default": "$accent" }
+            },
+            "muted": {
+                "textColor": { "default": "$fgMuted" }
+            }
+        },
+        "panel": {
+            "primary": {
+                "backgroundColor": { "default": "transparent" }
+            },
+            "card": {
+                "backgroundColor": { "default": "$surface1" },
+                "borderColor":     { "default": "$border" },
+                "cornerRadius": 8
+            },
+            "surface": {
+                "backgroundColor": { "default": "$surface2" },
+                "cornerRadius": 4
+            },
+            "badge-ok": {
+                "backgroundColor": { "default": "$okBg" },
+                "borderColor":     { "default": "$okBorder" },
+                "cornerRadius": 4
+            },
+            "badge-warn": {
+                "backgroundColor": { "default": "$warnBg" },
+                "borderColor":     { "default": "$warnBorder" },
+                "cornerRadius": 4
+            },
+            "badge-err": {
+                "backgroundColor": { "default": "$errBg" },
+                "borderColor":     { "default": "$errBorder" },
+                "cornerRadius": 4
+            }
+        }
+    }
+}

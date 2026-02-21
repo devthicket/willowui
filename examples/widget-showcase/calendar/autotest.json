@@ -1,0 +1,54 @@
+{
+  "show_cursor": true,
+  "steps": [
+    {"action": "move", "x": [-5, 325], "y": -5},
+
+    {"action": "wait", "ms": 500},
+    {"action": "start_gif", "label": "calendar", "x": 0, "y": 0, "width": 320, "height": 240, "maxWidth": 320, "maxHeight": 240, "fps": 30, "dropEvery": 1, "noDedup": true, "noDiff": true, "noDownscale": true},
+
+    {"action": "wait", "ms": 300},
+
+    {"action": "move", "x": 120, "y": 120, "tween": 300},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 100},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 200},
+    {"action": "move", "x": [220, 300], "y": [30, 60], "tween": 200},
+    {"action": "wait", "ms": 400},
+
+    {"action": "move", "x": 292, "y": 24, "tween": 250},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 100},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 200},
+    {"action": "move", "x": [200, 280], "y": [60, 90], "tween": 200},
+    {"action": "wait", "ms": 500},
+
+    {"action": "move", "x": 160, "y": 130, "tween": 200},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 100},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 200},
+    {"action": "move", "x": [220, 300], "y": [60, 90], "tween": 200},
+    {"action": "wait", "ms": 400},
+
+    {"action": "move", "x": 28, "y": 24, "tween": 250},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 100},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 100},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 500},
+
+    {"action": "move", "x": [-5, 325], "y": 245, "tween": 300},
+    {"action": "wait", "ms": 300},
+
+    {"action": "stop_gif"}
+  ]
+}

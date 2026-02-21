@@ -1,0 +1,26 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click",      "x": 120, "y": 93},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "checkbox-checked"},
+
+    {"action": "click",      "x": 105, "y": 126},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "after-prog-toggle"},
+
+    {"action": "click",      "x": 50,  "y": 202},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "radio-option-0"},
+
+    {"action": "click",      "x": 50,  "y": 230},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "radio-option-1"},
+
+    {"action": "click",      "x": 50,  "y": 258},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "radio-option-2"}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "steps": [
+    {"action": "wait", "ms": 500},
+    {"action": "start_gif", "label": "progress-bar", "x": 0, "y": 0, "width": 320, "height": 240, "maxWidth": 320, "maxHeight": 240, "fps": 30, "dropEvery": 1, "noDedup": true, "noDiff": true, "noDownscale": true},
+
+    {"action": "wait", "ms": 4000},
+
+    {"action": "stop_gif"}
+  ]
+}

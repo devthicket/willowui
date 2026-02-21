@@ -1,0 +1,1529 @@
+{
+    "variants": [
+        "card",
+        "surface",
+        "heading",
+        "muted"
+    ],
+    "colors": {
+        "bg": "#06060A",
+        "surface": "#0A0A12",
+        "surfaceLight": "#12121C",
+        "surfaceBright": "#1A1A28",
+        "cyan": "#00E5FF",
+        "cyanBright": "#66F0FF",
+        "cyanMid": "#00AAC0",
+        "cyanDim": "#006878",
+        "cyanDark": "#003844",
+        "cyanDeep": "#001820",
+        "cyanDeepMid": "#002430",
+        "cyanDeepHover": "#004858",
+        "cyanDeepActive": "#001418",
+        "magenta": "#FF00CC",
+        "magentaBright": "#FF44DD",
+        "magentaMid": "#CC0099",
+        "magentaDim": "#880066",
+        "magentaDark": "#440033",
+        "magentaDeep": "#220018",
+        "magentaDeepMid": "#330022",
+        "magentaDeepHover": "#580044",
+        "magentaDeepActive": "#1A0010",
+        "magentaBorder": "rgba(255, 0, 204, 0.5)",
+        "neonGreen": "#39FF14",
+        "neonGreenMid": "#28BB10",
+        "neonGreenDark": "#186808",
+        "red": "#FF2222",
+        "redBright": "#FF5555",
+        "redMid": "#CC1111",
+        "redDark": "#660808",
+        "redBg": "#440808",
+        "redBgDark": "#220404",
+        "redBgHover": "#580C0C",
+        "redBgHoverDark": "#330606",
+        "redBgActive": "#1A0303",
+        "redBorder": "rgba(255, 34, 34, 0.5)",
+        "fg": "#E0F0FF",
+        "fgMuted": "#6080A0",
+        "fgDim": "rgba(200, 220, 255, 0.25)",
+        "border": "rgba(0, 229, 255, 0.5)",
+        "borderBright": "#00E5FF",
+        "cyanTint": "rgba(0, 229, 255, 0.06)",
+        "cyanTintMid": "rgba(0, 229, 255, 0.08)",
+        "cyanTintBright": "rgba(0, 229, 255, 0.15)",
+        "cyanSelection": "rgba(0, 229, 255, 0.2)",
+        "cyanTintMax": "rgba(0, 229, 255, 0.22)",
+        "disabled": "rgba(20, 20, 40, 0.7)",
+        "disabledFg": "rgba(200, 220, 255, 0.18)"
+    },
+    "components": {
+        "_": {
+            "borderWidth": 1,
+            "cornerRadius": 2,
+            "focusColor": {
+                "focus": "$cyan"
+            },
+            "focusRingWidth": 2
+        },
+        "button": {
+            "_": {
+                "cornerRadius": 3,
+                "borderWidth": 1,
+                "padding": {
+                    "top": 6,
+                    "right": 14,
+                    "bottom": 6,
+                    "left": 14
+                },
+                "offsetY": {
+                    "default": 0,
+                    "hover": -1,
+                    "active": 2
+                }
+            },
+            "primary": {
+                "backgroundColor": {
+                    "default": "gradientV($cyanDark, $cyanDeep)",
+                    "hover": "gradientV($cyanDeepHover, $cyanDeepMid)",
+                    "active": "$cyanDeepActive",
+                    "disabled": "$disabled"
+                },
+                "textColor": {
+                    "default": "$cyan",
+                    "hover": "$cyanBright",
+                    "active": "$cyanMid",
+                    "disabled": "$disabledFg"
+                },
+                "borderColor": {
+                    "default": "$border",
+                    "hover": "$borderBright",
+                    "focus": "$borderBright"
+                }
+            },
+            "accent": {
+                "backgroundColor": {
+                    "default": "gradientV($magentaDark, $magentaDeep)",
+                    "hover": "gradientV($magentaDeepHover, $magentaDeepMid)",
+                    "active": "$magentaDeepActive",
+                    "disabled": "$disabled"
+                },
+                "textColor": {
+                    "default": "$magenta",
+                    "hover": "$magentaBright",
+                    "active": "$magentaMid",
+                    "disabled": "$disabledFg"
+                },
+                "borderColor": {
+                    "default": "$magentaBorder",
+                    "hover": "$magenta",
+                    "focus": "$magenta"
+                }
+            },
+            "danger": {
+                "backgroundColor": {
+                    "default": "gradientV($redBg, $redBgDark)",
+                    "hover": "gradientV($redBgHover, $redBgHoverDark)",
+                    "active": "$redBgActive",
+                    "disabled": "$disabled"
+                },
+                "textColor": {
+                    "default": "$red",
+                    "hover": "$redBright",
+                    "active": "$redMid",
+                    "disabled": "$disabledFg"
+                },
+                "borderColor": {
+                    "default": "$redBorder",
+                    "hover": "$red"
+                }
+            }
+        },
+        "label": {
+            "primary": {
+                "textColor": {
+                    "default": "$fg",
+                    "disabled": "$disabledFg"
+                }
+            },
+            "heading": {
+                "textColor": {
+                    "default": "$cyan"
+                }
+            },
+            "muted": {
+                "textColor": {
+                    "default": "$fgMuted",
+                    "disabled": "$disabledFg"
+                }
+            }
+        },
+        "toggle": {
+            "primary": {
+                "trackColor": {
+                    "default": "$surfaceBright",
+                    "hover": "$magentaDark",
+                    "active": "$magentaDim",
+                    "focus": "$surfaceBright",
+                    "focusActive": "$magentaDim",
+                    "disabled": "$disabled"
+                },
+                "thumbColor": {
+                    "default": "$fgMuted",
+                    "active": "$magenta",
+                    "disabled": "$disabledFg"
+                },
+                "cornerRadius": 7
+            }
+        },
+        "checkbox": {
+            "primary": {
+                "boxColor": {
+                    "default": "$surfaceLight",
+                    "hover": "$surfaceBright",
+                    "focus": "$surfaceLight",
+                    "focusActive": "$cyan",
+                    "disabled": "$disabled"
+                },
+                "checkColor": {
+                    "default": "$cyan",
+                    "disabled": "$disabledFg"
+                }
+            }
+        },
+        "radio": {
+            "primary": {
+                "circleColor": {
+                    "default": "$surfaceLight",
+                    "hover": "$surfaceBright",
+                    "focus": "$surfaceLight",
+                    "focusActive": "$magenta",
+                    "disabled": "$disabled"
+                },
+                "dotColor": {
+                    "default": "$magenta",
+                    "disabled": "$disabledFg"
+                }
+            }
+        },
+        "slider": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$surface",
+                    "disabled": "$disabled"
+                },
+                "borderColor": {
+                    "default": "$border"
+                },
+                "cornerRadius": 3,
+                "thumbBackgroundColor": {
+                    "default": "$cyanDark",
+                    "hover": "$cyanDim",
+                    "active": "$cyanMid",
+                    "disabled": "$disabledFg"
+                },
+                "thumbBorderColor": {
+                    "default": "$border",
+                    "hover": "$cyan",
+                    "disabled": "$disabled"
+                },
+                "thumbCornerRadius": 2
+            }
+        },
+        "meterBar": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$surface"
+                },
+                "borderColor": {
+                    "default": "$border"
+                },
+                "cornerRadius": 3,
+                "fillBackgroundColor": {
+                    "default": "gradientH($neonGreenDark, $neonGreen)"
+                },
+                "fillBorderColor": {
+                    "default": "$neonGreenDark"
+                },
+                "fillCornerRadius": 2,
+                "textColor": {
+                    "default": "$fg"
+                }
+            }
+        },
+        "tabs": {
+            "primary": {
+                "barBackgroundColor": {
+                    "default": "$surface"
+                },
+                "selectedTabColor": {
+                    "default": "$cyan"
+                },
+                "unselectedTabColor": {
+                    "default": "$fgMuted",
+                    "hover": "$fg"
+                },
+                "selectedTabBackgroundColor": {
+                    "default": "$cyanTintBright",
+                    "hover": "$cyanTintMax"
+                },
+                "unselectedTabBackgroundColor": {
+                    "default": "transparent",
+                    "hover": "$cyanTint"
+                }
+            }
+        },
+        "toggleButtonBar": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$bg"
+                },
+                "borderColor": {
+                    "default": "$border"
+                },
+                "cornerRadius": 3,
+                "padding": {
+                    "top": 3,
+                    "right": 3,
+                    "bottom": 3,
+                    "left": 3
+                },
+                "spacing": 2,
+                "selectedBackgroundColor": {
+                    "default": "gradientV($cyanDim, $cyanDark)",
+                    "hover": "gradientV($cyanMid, $cyanDim)",
+                    "active": "$cyanDark"
+                },
+                "selectedTextColor": {
+                    "default": "$fg"
+                },
+                "selectedCornerRadius": 2,
+                "unselectedBackgroundColor": {
+                    "default": "transparent",
+                    "hover": "$cyanTintMid"
+                },
+                "unselectedTextColor": {
+                    "default": "$fgMuted"
+                },
+                "unselectedCornerRadius": 2
+            }
+        },
+        "textInput": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$surface",
+                    "hover": "$surfaceLight",
+                    "focus": "$surfaceLight",
+                    "disabled": "$disabled"
+                },
+                "textColor": {
+                    "default": "$fg",
+                    "disabled": "$disabledFg"
+                },
+                "cursorColor": {
+                    "default": "$cyan"
+                },
+                "selectionColor": {
+                    "default": "$cyanSelection"
+                },
+                "placeholderAlpha": 0.3,
+                "borderColor": {
+                    "default": "$border",
+                    "hover": "$border",
+                    "focus": "$cyan"
+                },
+                "cornerRadius": 2
+            }
+        },
+        "textArea": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$surface",
+                    "hover": "$surfaceLight",
+                    "focus": "$surfaceLight",
+                    "disabled": "$disabled"
+                },
+                "textColor": {
+                    "default": "$fg",
+                    "disabled": "$disabledFg"
+                },
+                "cursorColor": {
+                    "default": "$cyan"
+                },
+                "selectionColor": {
+                    "default": "$cyanSelection"
+                },
+                "placeholderAlpha": 0.3,
+                "borderColor": {
+                    "default": "$border",
+                    "hover": "$border",
+                    "focus": "$cyan"
+                },
+                "cornerRadius": 2,
+                "padding": {
+                    "top": 6,
+                    "right": 8,
+                    "bottom": 6,
+                    "left": 8
+                }
+            }
+        },
+        "scrollBar": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$surface"
+                },
+                "cornerRadius": 3,
+                "thumbBackgroundColor": {
+                    "default": "$cyanDark",
+                    "hover": "$cyanDim",
+                    "active": "$cyanMid",
+                    "disabled": "$disabledFg"
+                },
+                "thumbBorderColor": {
+                    "default": "$border",
+                    "disabled": "$disabled"
+                },
+                "thumbCornerRadius": 2
+            }
+        },
+        "list": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$surface"
+                },
+                "borderColor": {
+                    "default": "$border"
+                },
+                "itemBackgroundColor": {
+                    "default": "$cyanTint"
+                }
+            }
+        },
+        "treeList": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "tileList": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "richText": {
+            "primary": {
+                "textColor": {
+                    "default": "$fg"
+                }
+            }
+        },
+        "panel": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$surfaceLight"
+                },
+                "borderColor": {
+                    "default": "$border"
+                }
+            },
+            "card": {
+                "backgroundColor": {
+                    "default": "$surfaceLight"
+                },
+                "borderColor": {
+                    "default": "$border"
+                },
+                "cornerRadius": 4
+            },
+            "surface": {
+                "backgroundColor": {
+                    "default": "$surface"
+                },
+                "cornerRadius": 2
+            }
+        },
+        "window": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$bg"
+                },
+                "borderColor": {
+                    "default": "$border"
+                },
+                "titleBackgroundColor": {
+                    "default": "gradientH($cyanDeep, $cyanDark)",
+                    "focus": "gradientH($cyanDeepMid, $cyanDeepHover)"
+                },
+                "titleTextColor": {
+                    "default": "$cyan"
+                },
+                "resizeHandleColor": {
+                    "default": "$cyanDim"
+                },
+                "cornerRadius": 3
+            }
+        },
+        "tooltip": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "rgba(10, 10, 18, 0.96)"
+                },
+                "borderColor": {
+                    "default": "$cyanMid"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 4,
+                "padding": {
+                    "top": 6,
+                    "right": 10,
+                    "bottom": 6,
+                    "left": 10
+                }
+            }
+        },
+        "calendarSelector": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$surface"
+                },
+                "borderColor": {
+                    "default": "$cyanDim"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 4,
+                "headerBackground": {
+                    "default": "$surfaceLight"
+                },
+                "headerTextColor": {
+                    "default": "$cyan"
+                },
+                "navButtonColor": {
+                    "default": "$cyanMid"
+                },
+                "navButtonHoverColor": {
+                    "default": "$cyanBright"
+                },
+                "weekdayTextColor": {
+                    "default": "$cyanDim"
+                },
+                "dayTextColor": {
+                    "default": "$cyanBright"
+                },
+                "dayBackground": {
+                    "default": "$surfaceLight"
+                },
+                "dayHoverBg": {
+                    "default": "$cyanDeepHover"
+                },
+                "daySelectedBg": {
+                    "default": "$cyanMid"
+                },
+                "daySelectedColor": {
+                    "default": "$bg"
+                },
+                "dayTodayBg": {
+                    "default": "$cyanDeep"
+                },
+                "dayTodayColor": {
+                    "default": "$cyan"
+                },
+                "dayMutedColor": {
+                    "default": "$cyanDark"
+                },
+                "dayCornerRadius": 2,
+                "triggerBackground": {
+                    "default": "$surfaceLight"
+                },
+                "triggerTextColor": {
+                    "default": "$cyan"
+                },
+                "triggerBorderColor": {
+                    "default": "$cyanDim"
+                }
+            }
+        },
+        "toolBar": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$surface"
+                },
+                "borderColor": {
+                    "default": "$cyanDim"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 2,
+                "spacing": 4,
+                "separatorColor": {
+                    "default": "$cyanDark"
+                },
+                "separatorThickness": 1,
+                "separatorHeight": 0.6
+            }
+        },
+        "badge": {
+            "primary": {
+                "textColor": {
+                    "default": "$bg"
+                },
+                "cornerRadius": 10,
+                "padding": {
+                    "top": 2,
+                    "right": 6,
+                    "bottom": 2,
+                    "left": 6
+                },
+                "dotSize": 8,
+                "backgroundColor": {
+                    "default": "$cyan"
+                }
+            },
+            "success": {
+                "backgroundColor": {
+                    "default": "$neonGreen"
+                }
+            },
+            "warning": {
+                "backgroundColor": {
+                    "default": "#C89030"
+                }
+            },
+            "danger": {
+                "backgroundColor": {
+                    "default": "$red"
+                }
+            },
+            "neutral": {
+                "backgroundColor": {
+                    "default": "$surfaceBright"
+                }
+            }
+        },
+        "maskedInput": {
+            "primary": {
+                "textColor": {
+                    "default": "$fg",
+                    "disabled": "$disabledFg"
+                },
+                "cursorColor": {
+                    "default": "$cyan"
+                },
+                "selectionColor": {
+                    "default": "$cyanSelection"
+                },
+                "borderColor": {
+                    "default": "$border",
+                    "hover": "$border",
+                    "focus": "$cyan"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 2,
+                "placeholderAlpha": 0.3,
+                "padding": {
+                    "top": 6,
+                    "right": 10,
+                    "bottom": 6,
+                    "left": 10
+                },
+                "literalColor": {
+                    "default": "$fgMuted"
+                },
+                "maskPlaceholderColor": {
+                    "default": "$fgDim"
+                },
+                "backgroundColor": {
+                    "default": "$surface",
+                    "hover": "$surfaceLight",
+                    "focus": "$surfaceLight",
+                    "disabled": "$disabled"
+                }
+            }
+        },
+        "inputField": {
+            "primary": {
+                "labelColor": {
+                    "default": "$fgMuted"
+                },
+                "requiredColor": {
+                    "default": "$red"
+                },
+                "errorColor": {
+                    "default": "$red"
+                },
+                "warningColor": {
+                    "default": "#C89030"
+                },
+                "successColor": {
+                    "default": "$neonGreen"
+                },
+                "labelGap": 4,
+                "messageGap": 4,
+                "labelLeftGap": 2
+            }
+        },
+        "searchBox": {
+            "primary": {
+                "textColor": {
+                    "default": "$fg",
+                    "disabled": "$disabledFg"
+                },
+                "cursorColor": {
+                    "default": "$cyan"
+                },
+                "selectionColor": {
+                    "default": "$cyanSelection"
+                },
+                "borderColor": {
+                    "default": "$border",
+                    "hover": "$border",
+                    "focus": "$cyan"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 2,
+                "placeholderAlpha": 0.3,
+                "padding": {
+                    "top": 6,
+                    "right": 10,
+                    "bottom": 6,
+                    "left": 10
+                },
+                "iconColor": {
+                    "default": "$fgMuted"
+                },
+                "clearButtonColor": {
+                    "default": "$fgMuted"
+                },
+                "clearHoverColor": {
+                    "default": "$fg"
+                },
+                "clearActiveColor": {
+                    "default": "$cyan"
+                },
+                "iconGap": 6,
+                "backgroundColor": {
+                    "default": "$surface",
+                    "hover": "$surfaceLight",
+                    "focus": "$surfaceLight",
+                    "disabled": "$disabled"
+                }
+            }
+        },
+        "navDrawer": {
+            "primary": {
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "padding": {
+                    "top": 8,
+                    "right": 8,
+                    "bottom": 8,
+                    "left": 8
+                },
+                "backdropColor": {
+                    "default": "rgba(0, 0, 0, 0.6)"
+                },
+                "animationDuration": 0.25,
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "inventory": {
+            "primary": {
+                "cellColor": {
+                    "default": "$surfaceLight"
+                },
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "optionRotator": {
+            "primary": {
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 2,
+                "padding": {
+                    "top": 4,
+                    "right": 4,
+                    "bottom": 4,
+                    "left": 4
+                },
+                "textColor": {
+                    "default": "$fg"
+                },
+                "chevronBackground": {
+                    "default": "$surfaceLight",
+                    "hover": "$surfaceBright",
+                    "active": "$cyan"
+                },
+                "chevronBorderColor": {
+                    "default": "$border"
+                },
+                "chevronBorderWidth": 1,
+                "chevronCornerRadius": 2,
+                "chevronWidth": 28,
+                "chevronIconColor": {
+                    "default": "$fg"
+                },
+                "chevronIconSize": 1.2,
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "dragHandle": {
+            "primary": {
+                "gripColor": {
+                    "default": "$fgMuted"
+                },
+                "gripHoverColor": {
+                    "default": "$fg"
+                },
+                "gripActiveColor": {
+                    "default": "$cyan"
+                },
+                "gripDotSize": 3,
+                "gripSpacing": 4,
+                "gripCount": 3,
+                "backgroundColor": {
+                    "default": "transparent"
+                }
+            }
+        },
+        "sortableList": {
+            "primary": {
+                "itemBackground": {
+                    "default": "$surfaceLight"
+                },
+                "itemBorderColor": {
+                    "default": "$border"
+                },
+                "itemBorderWidth": 1,
+                "itemCornerRadius": 2,
+                "itemPadding": {
+                    "top": 6,
+                    "right": 10,
+                    "bottom": 6,
+                    "left": 10
+                },
+                "selectionColor": {
+                    "default": "$cyanSelection"
+                },
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "handleColor": {
+                    "default": "$fgMuted"
+                },
+                "handleHoverColor": {
+                    "default": "$fg"
+                },
+                "handleActiveColor": {
+                    "default": "$cyan"
+                },
+                "handleWidth": 20,
+                "handleGap": 6,
+                "insertIndicatorColor": {
+                    "default": "$cyan"
+                },
+                "insertIndicatorWidth": 2,
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "image": {
+            "primary": {
+                "cornerRadius": 0,
+                "backgroundColor": {
+                    "default": "transparent"
+                }
+            }
+        },
+        "animatedImage": {
+            "primary": {
+                "cornerRadius": 0,
+                "backgroundColor": {
+                    "default": "transparent"
+                }
+            }
+        },
+        "colorPicker": {
+            "primary": {
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 4,
+                "padding": {
+                    "top": 8,
+                    "right": 8,
+                    "bottom": 8,
+                    "left": 8
+                },
+                "swatchBorderColor": {
+                    "default": "$cyanDim"
+                },
+                "swatchBorderWidth": 2,
+                "swatchCornerRadius": 2,
+                "popupWidth": 260,
+                "svFieldSize": 180,
+                "hueBarHeight": 16,
+                "alphaBarHeight": 16,
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "toast": {
+            "primary": {
+                "textColor": {
+                    "default": "$fg"
+                },
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 4,
+                "padding": {
+                    "top": 10,
+                    "right": 14,
+                    "bottom": 10,
+                    "left": 14
+                },
+                "progressBarColor": {
+                    "default": "$cyan"
+                },
+                "minWidth": 200,
+                "maxWidth": 400,
+                "itemSpacing": 8,
+                "animDuration": 0.3,
+                "backgroundColor": {
+                    "default": "$surfaceLight"
+                },
+                "iconColor": {
+                    "default": "$cyan"
+                }
+            },
+            "info": {
+                "backgroundColor": {
+                    "default": "$cyanDeep"
+                },
+                "iconColor": {
+                    "default": "$cyan"
+                }
+            },
+            "success": {
+                "backgroundColor": {
+                    "default": "rgba(57, 255, 20, 0.1)"
+                },
+                "iconColor": {
+                    "default": "$neonGreen"
+                }
+            },
+            "warning": {
+                "backgroundColor": {
+                    "default": "rgba(200, 144, 48, 0.15)"
+                },
+                "iconColor": {
+                    "default": "#C89030"
+                }
+            },
+            "danger": {
+                "backgroundColor": {
+                    "default": "$redBgDark"
+                },
+                "iconColor": {
+                    "default": "$red"
+                }
+            }
+        },
+        "popover": {
+            "primary": {
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 4,
+                "padding": {
+                    "top": 10,
+                    "right": 12,
+                    "bottom": 10,
+                    "left": 12
+                },
+                "titleColor": {
+                    "default": "$cyan"
+                },
+                "backgroundColor": {
+                    "default": "$surfaceLight"
+                }
+            }
+        },
+        "iconButton": {
+            "primary": {
+                "borderColor": {
+                    "default": "transparent",
+                    "hover": "$border"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 2,
+                "iconColor": {
+                    "default": "$fg",
+                    "hover": "$cyan",
+                    "disabled": "$disabledFg"
+                },
+                "activeColor": {
+                    "default": "$cyan"
+                },
+                "labelColor": {
+                    "default": "$fg",
+                    "disabled": "$disabledFg"
+                },
+                "iconSize": 18,
+                "padding": {
+                    "top": 6,
+                    "right": 6,
+                    "bottom": 6,
+                    "left": 6
+                },
+                "labelGap": 4,
+                "backgroundColor": {
+                    "default": "transparent",
+                    "hover": "$surfaceLight",
+                    "active": "$surfaceBright",
+                    "disabled": "$disabled"
+                }
+            }
+        },
+        "statWeb": {
+            "primary": {
+                "polygonFill": {
+                    "default": "rgba(0, 229, 255, 0.15)"
+                },
+                "polygonStroke": {
+                    "default": "$cyan"
+                },
+                "polygonStrokeWidth": 2,
+                "spokeColor": {
+                    "default": "$border"
+                },
+                "spokeWidth": 1,
+                "gridColor": {
+                    "default": "$border"
+                },
+                "gridLevels": 4,
+                "handleColor": {
+                    "default": "$cyan"
+                },
+                "handleHoverColor": {
+                    "default": "$cyanBright"
+                },
+                "handleRadius": 5,
+                "labelColor": {
+                    "default": "$fgMuted"
+                },
+                "labelFontSize": 12,
+                "labelOffset": 10,
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "gradientEditor": {
+            "primary": {
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 2,
+                "padding": {
+                    "top": 8,
+                    "right": 8,
+                    "bottom": 8,
+                    "left": 8
+                },
+                "previewHeight": 80,
+                "previewSize": 120,
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "accordion": {
+            "primary": {
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "headerBackground": {
+                    "default": "$surfaceLight",
+                    "hover": "$surfaceBright"
+                },
+                "headerHoverBg": {
+                    "default": "$surfaceBright"
+                },
+                "headerTextColor": {
+                    "default": "$cyan"
+                },
+                "headerHeight": 36,
+                "headerIconSize": 14,
+                "headerIconGap": 8,
+                "chevronColor": {
+                    "default": "$cyanDim"
+                },
+                "chevronSize": 12,
+                "contentBackground": {
+                    "default": "$surface"
+                },
+                "dividerColor": {
+                    "default": "$border"
+                },
+                "dividerHeight": 1,
+                "animationDuration": 0.2,
+                "cornerRadius": 2,
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "timePicker": {
+            "primary": {
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 2,
+                "padding": {
+                    "top": 8,
+                    "right": 8,
+                    "bottom": 8,
+                    "left": 8
+                },
+                "columnBackground": {
+                    "default": "$surfaceLight"
+                },
+                "columnWidth": 48,
+                "columnHeight": 120,
+                "valueTextColor": {
+                    "default": "$cyan"
+                },
+                "valueFontSize": 18,
+                "arrowColor": {
+                    "default": "$fgMuted"
+                },
+                "arrowHoverColor": {
+                    "default": "$cyan"
+                },
+                "arrowSize": 16,
+                "separatorColor": {
+                    "default": "$cyanDim"
+                },
+                "separatorWidth": 2,
+                "amPmBackground": {
+                    "default": "$surfaceLight",
+                    "active": "$cyan"
+                },
+                "amPmActiveColor": {
+                    "default": "$bg"
+                },
+                "amPmTextColor": {
+                    "default": "$fgMuted"
+                },
+                "amPmCornerRadius": 2,
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "imageCropper": {
+            "primary": {
+                "cornerRadius": 0,
+                "cropBorderColor": {
+                    "default": "$cyan"
+                },
+                "cropBorderWidth": 2,
+                "handleBackground": {
+                    "default": "$cyanBright"
+                },
+                "handleSize": 10,
+                "handleCornerRadius": 5,
+                "dimColor": {
+                    "default": "rgba(0, 0, 0, 0.7)"
+                },
+                "gridColor": {
+                    "default": "rgba(0, 229, 255, 0.3)"
+                },
+                "gridLineWidth": 1,
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "tag": {
+            "primary": {
+                "selectedBackgroundColor": {
+                    "default": "$cyan"
+                },
+                "textColor": {
+                    "default": "$fg"
+                },
+                "selectedTextColor": {
+                    "default": "$bg"
+                },
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 12,
+                "padding": {
+                    "top": 3,
+                    "right": 8,
+                    "bottom": 3,
+                    "left": 8
+                },
+                "removeButtonSize": 14,
+                "removeButtonColor": {
+                    "default": "$fgMuted"
+                },
+                "gap": 4,
+                "backgroundColor": {
+                    "default": "$surfaceLight"
+                }
+            },
+            "success": {
+                "backgroundColor": {
+                    "default": "rgba(57, 255, 20, 0.15)"
+                }
+            },
+            "warning": {
+                "backgroundColor": {
+                    "default": "rgba(200, 144, 48, 0.15)"
+                }
+            },
+            "danger": {
+                "backgroundColor": {
+                    "default": "rgba(255, 34, 34, 0.15)"
+                }
+            },
+            "neutral": {
+                "backgroundColor": {
+                    "default": "$surfaceBright"
+                }
+            }
+        },
+        "tagBar": {
+            "primary": {
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 2,
+                "padding": {
+                    "top": 4,
+                    "right": 6,
+                    "bottom": 4,
+                    "left": 6
+                },
+                "spacing": 4,
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "dataTable": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$bg"
+                },
+                "headerBackground": {
+                    "default": "$surfaceBright"
+                },
+                "headerText": {
+                    "default": "$cyan"
+                },
+                "headerHoverColor": {
+                    "default": "$cyanDim"
+                },
+                "headerBorderColor": {
+                    "default": "$border"
+                },
+                "headerBorderWidth": 1,
+                "rowBackground": {
+                    "default": "$surface"
+                },
+                "rowBackgroundAlt": {
+                    "default": "$surfaceLight"
+                },
+                "rowHoverColor": {
+                    "default": "$cyanTintMid"
+                },
+                "selectionColor": {
+                    "default": "$cyanSelection"
+                },
+                "cellText": {
+                    "default": "$fg"
+                },
+                "cellPadding": 4,
+                "dividerColor": {
+                    "default": "rgba(0, 229, 255, 0.15)"
+                },
+                "dividerWidth": 1,
+                "sortGlyphColor": {
+                    "default": "$cyan"
+                },
+                "sortGlyphInactive": {
+                    "default": "$fgDim"
+                },
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 2
+            }
+        },
+        "select": {
+            "primary": {
+                "textColor": {
+                    "default": "$fg",
+                    "disabled": "$disabledFg"
+                },
+                "borderColor": {
+                    "default": "$border",
+                    "hover": "$border",
+                    "focus": "$cyan"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 2,
+                "padding": {
+                    "top": 6,
+                    "right": 10,
+                    "bottom": 6,
+                    "left": 10
+                },
+                "chevronColor": {
+                    "default": "$fgMuted"
+                },
+                "backgroundColor": {
+                    "default": "$surface",
+                    "hover": "$surfaceLight",
+                    "focus": "$surfaceLight",
+                    "disabled": "$disabled"
+                }
+            }
+        },
+        "sortableTreeList": {
+            "primary": {
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "rowBackground": {
+                    "default": "transparent"
+                },
+                "rowHoverBg": {
+                    "default": "$cyanTint"
+                },
+                "rowSelectedBg": {
+                    "default": "$cyanSelection"
+                },
+                "rowHeight": 28,
+                "rowPadding": {
+                    "top": 2,
+                    "right": 6,
+                    "bottom": 2,
+                    "left": 6
+                },
+                "indentWidth": 20,
+                "labelColor": {
+                    "default": "$fg"
+                },
+                "iconSize": 14,
+                "iconGap": 6,
+                "chevronColor": {
+                    "default": "$fgMuted"
+                },
+                "chevronSize": 12,
+                "dropLineColor": {
+                    "default": "$cyan"
+                },
+                "dropLineWidth": 2,
+                "dropTargetBg": {
+                    "default": "rgba(0, 229, 255, 0.08)"
+                },
+                "dropTargetBorderColor": {
+                    "default": "$cyan"
+                },
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "keybindInput": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$surface",
+                    "hover": "$surfaceLight",
+                    "focus": "$surfaceLight"
+                },
+                "borderColor": {
+                    "default": "$border",
+                    "hover": "$border",
+                    "focus": "$cyan"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 2,
+                "padding": {
+                    "top": 6,
+                    "right": 10,
+                    "bottom": 6,
+                    "left": 10
+                },
+                "keyCapBackground": {
+                    "default": "$surfaceLight"
+                },
+                "keyCapTextColor": {
+                    "default": "$cyan"
+                },
+                "keyCapBorderColor": {
+                    "default": "$cyanDim"
+                },
+                "keyCapBorderWidth": 1,
+                "keyCapCornerRadius": 2,
+                "keyCapPadding": {
+                    "top": 2,
+                    "right": 6,
+                    "bottom": 2,
+                    "left": 6
+                },
+                "listeningBackground": {
+                    "default": "$surfaceLight"
+                },
+                "listeningTextColor": {
+                    "default": "$cyan"
+                },
+                "listeningBorderColor": {
+                    "default": "$cyan"
+                },
+                "clearButtonColor": {
+                    "default": "$fgMuted"
+                },
+                "clearButtonSize": 14,
+                "unsetTextColor": {
+                    "default": "$fgDim"
+                }
+            }
+        },
+        "richTextEditor": {
+            "primary": {
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 2,
+                "padding": {
+                    "top": 8,
+                    "right": 8,
+                    "bottom": 8,
+                    "left": 8
+                },
+                "toolbarBackground": {
+                    "default": "$surfaceLight"
+                },
+                "toolbarHeight": 36,
+                "toolbarButtonSize": 28,
+                "toolbarButtonGap": 2,
+                "toolbarActiveColor": {
+                    "default": "$cyan"
+                },
+                "contentBackground": {
+                    "default": "$surface"
+                },
+                "cursorColor": {
+                    "default": "$cyan"
+                },
+                "selectionColor": {
+                    "default": "$cyanSelection"
+                },
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "propertyInspector": {
+            "primary": {
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 2,
+                "searchBarHeight": 32,
+                "searchBarGap": 4,
+                "groupHeaderBackground": {
+                    "default": "$surfaceLight"
+                },
+                "groupHeaderTextColor": {
+                    "default": "$cyan"
+                },
+                "groupHeaderHeight": 28,
+                "rowBackground": {
+                    "default": "$surface"
+                },
+                "rowAltBackground": {
+                    "default": "$surfaceLight"
+                },
+                "rowHoverBackground": {
+                    "default": "$cyanTint"
+                },
+                "rowHeight": 28,
+                "labelColor": {
+                    "default": "$fgMuted"
+                },
+                "labelWidth": 120,
+                "dividerColor": {
+                    "default": "$border"
+                },
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "menuPopup": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "rgba(10, 10, 18, 0.98)"
+                },
+                "itemBackgroundColor": {
+                    "default": "transparent",
+                    "hover": "$surfaceBright"
+                },
+                "textColor": {
+                    "default": "$fg"
+                },
+                "disabledColor": {
+                    "default": "$disabledFg"
+                },
+                "separatorColor": {
+                    "default": "$cyanDim"
+                },
+                "borderColor": {
+                    "default": "$border"
+                },
+                "borderWidth": 1,
+                "cornerRadius": 2,
+                "padding": {
+                    "top": 4,
+                    "right": 4,
+                    "bottom": 4,
+                    "left": 4
+                },
+                "itemHeight": 28
+            }
+        }
+    }
+}

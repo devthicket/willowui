@@ -1,0 +1,62 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "01-default-controls"},
+
+    {"action": "click", "x": 185, "y": 130},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "02-default-range"},
+
+    {"action": "click", "x": 270, "y": 130},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "03-default-lists"},
+
+    {"action": "click", "x": 100, "y": 130},
+    {"action": "wait", "frames": 5},
+
+    {"action": "click", "x": 317, "y": 18},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "04-dark-controls"},
+
+    {"action": "click", "x": 185, "y": 130},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "05-dark-range"},
+
+    {"action": "click", "x": 100, "y": 130},
+    {"action": "wait", "frames": 5},
+
+    {"action": "click", "x": 407, "y": 18},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "06-forest-controls"},
+
+    {"action": "click", "x": 185, "y": 130},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "07-forest-range"},
+
+    {"action": "click", "x": 100, "y": 130},
+    {"action": "wait", "frames": 5},
+
+    {"action": "click", "x": 497, "y": 18},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "08-jrpg-controls"},
+
+    {"action": "click", "x": 185, "y": 130},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "09-jrpg-range"},
+
+    {"action": "click", "x": 100, "y": 130},
+    {"action": "wait", "frames": 5},
+
+    {"action": "click", "x": 587, "y": 18},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "10-neon-controls"},
+
+    {"action": "click", "x": 185, "y": 130},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "11-neon-range"},
+
+    {"action": "click", "x": 270, "y": 130},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "12-neon-lists"}
+  ]
+}

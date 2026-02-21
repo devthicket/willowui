@@ -1,0 +1,33 @@
+<Panel layout="vbox" spacing="16">
+
+    <!-- heading + muted are custom label variants from theme.json -->
+    <Label variant="heading" text="Panel &amp; Label Variants" />
+    <Label variant="muted" text="Defined in theme.json -- no inline color attributes needed." />
+
+    <!-- card is a custom panel variant: surface1 bg + border + cornerRadius 8 -->
+    <Panel variant="card" layout="vbox" spacing="8" padding="12" size="460,0">
+        <Label variant="heading" text="User Profile" />
+        <Label text="Name: Ada Lovelace" />
+        <Label variant="muted" text="Last active: 3 minutes ago" />
+    </Panel>
+
+    <!-- surface is a custom panel variant: surface2 bg + cornerRadius 4 -->
+    <Panel variant="surface" layout="vbox" spacing="6" padding="10" size="460,0">
+        <Label variant="muted" text="API Endpoint" />
+        <Label text="https://api.example.com/v2/users" />
+    </Panel>
+
+    <!-- status badge variants: badge-ok, badge-warn, badge-err -->
+    <Panel layout="hbox" spacing="8">
+        <Panel variant="badge-ok"   layout="vbox" padding="8" size="140,0">
+            <Label text="● Build Passed"  />
+        </Panel>
+        <Panel variant="badge-warn" layout="vbox" padding="8" size="140,0">
+            <Label text="⚠ 3 Warnings"   />
+        </Panel>
+        <Panel variant="badge-err"  layout="vbox" padding="8" size="140,0">
+            <Label text="✕ Deploy Failed" />
+        </Panel>
+    </Panel>
+
+</Panel>

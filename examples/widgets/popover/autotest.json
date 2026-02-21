@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {"action": "screenshot", "label": "initial"},
+    {"action": "click", "x": 140, "y": 118},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "filter-popover-open"},
+    {"action": "click", "x": 400, "y": 300},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "filter-popover-dismissed"},
+    {"action": "click", "x": 140, "y": 328},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "stats-popover-open"}
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "initial-no-selection"},
+
+    {"action": "click",      "x": 176, "y": 132},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "one-row-selected"},
+
+    {"action": "click",      "x": 176, "y": 244},
+    {"action": "wait",       "frames": 3},
+    {"action": "click",      "x": 176, "y": 356},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "three-rows-selected"},
+
+    {"action": "click",      "x": 594, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "all-selected"},
+
+    {"action": "click",      "x": 672, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "selection-cleared"},
+
+    {"action": "click",      "x": 432, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "filter-high-level"},
+
+    {"action": "click",      "x": 594, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "select-all-filtered-rows"},
+
+    {"action": "click",      "x": 238, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "cleared-filter-selection-retained"}
+  ]
+}

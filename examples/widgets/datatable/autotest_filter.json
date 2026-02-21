@@ -1,0 +1,34 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "all-25-rows"},
+
+    {"action": "click",      "x": 292, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "filter-mages"},
+
+    {"action": "click",      "x": 238, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "filter-cleared-to-all"},
+
+    {"action": "click",      "x": 362, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "filter-warriors"},
+
+    {"action": "click",      "x": 238, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "filter-cleared-again"},
+
+    {"action": "click",      "x": 432, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "filter-high-level"},
+
+    {"action": "click",      "x": 176, "y": 100},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "filter-high-level-sorted-name-asc"},
+
+    {"action": "click",      "x": 238, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "all-rows-sort-preserved"}
+  ]
+}

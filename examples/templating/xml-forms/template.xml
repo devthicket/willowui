@@ -1,0 +1,53 @@
+<Panel layout="vbox" spacing="16" padding="20">
+
+	<!-- Text inputs -->
+	<Panel layout="vbox" spacing="8">
+		<Label text="Text Inputs" />
+		<TextInput width="320" placeholder="Name" bind:value="name" on:change="onNameChange" />
+		<TextInput width="320" placeholder="Email" bind:value="email" />
+		<TextArea width="320" rows="4" bind:value="notes" />
+	</Panel>
+
+	<!-- Toggles and checkboxes -->
+	<Panel layout="hbox" spacing="24">
+		<Panel layout="vbox" spacing="8">
+			<Label text="Toggle" />
+			<Toggle bind:value="enabled" on:change="onToggleChange" />
+		</Panel>
+		<Panel layout="vbox" spacing="8">
+			<Label text="Checkbox" />
+			<Checkbox text="Accept terms" bind:checked="agreed" on:change="onAgreedChange" />
+		</Panel>
+	</Panel>
+
+	<!-- Sliders and steppers -->
+	<Panel layout="vbox" spacing="8">
+		<Label bind:text="volumeLabel" />
+		<Slider width="320" range="0,100" step="1" bind:value="volume" on:change="onVolumeChange" />
+		<Label bind:text="quantityLabel" />
+		<NumberStepper width="160" min="1" max="99" step="1" bind:value="quantity" on:change="onQuantityChange" />
+	</Panel>
+
+	<!-- Select and OptionRotator -->
+	<Panel layout="vbox" spacing="8">
+		<Label text="Dropdown (Select)" />
+		<Select options="Warrior,Mage,Rogue,Paladin" width="200" bind:selected="classIndex" on:change="onClassChange" />
+		<Label text="Difficulty (OptionRotator)" />
+		<OptionRotator options="Easy,Normal,Hard,Nightmare" width="240" bind:selected="diffIndex" on:change="onDiffChange" />
+	</Panel>
+
+	<!-- Radio -->
+	<Panel layout="vbox" spacing="6">
+		<Label text="Theme" />
+		<Radio on:change="onThemeChange">
+			<RadioButton label="Light" />
+			<RadioButton label="Dark" />
+			<RadioButton label="System" />
+		</Radio>
+	</Panel>
+
+	<!-- Status + submit -->
+	<Label bind:text="status" />
+	<Button text="Submit" on:click="onSubmit" />
+
+</Panel>

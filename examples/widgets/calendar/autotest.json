@@ -1,0 +1,24 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 15},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click", "x": 140, "y": 210},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "after-click-day10"},
+
+    {"action": "click", "x": 307, "y": 92},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "after-next-month"},
+
+    {"action": "click", "x": 47, "y": 92},
+    {"action": "wait", "frames": 10},
+    {"action": "click", "x": 47, "y": 92},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "after-prev-month"},
+
+    {"action": "click", "x": 120, "y": 440},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "popup-open"}
+  ]
+}

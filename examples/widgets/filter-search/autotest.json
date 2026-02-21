@@ -1,0 +1,53 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "01-initial"},
+
+    {"action": "click",      "x": 240, "y": 112},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "02-focused"},
+
+    {"action": "type",       "text": "potion"},
+    {"action": "wait",       "frames": 10},
+    {"action": "screenshot", "label": "03-typed-potion"},
+
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "04-after-debounce"},
+
+    {"action": "click",      "x": 424, "y": 112},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "05-after-clear"},
+
+    {"action": "type",       "text": "zzz"},
+    {"action": "wait",       "frames": 15},
+    {"action": "screenshot", "label": "06-no-results"},
+
+    {"action": "click",      "x": 424, "y": 112},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "07-cleared-again"},
+
+    {"action": "type",       "text": "eth"},
+    {"action": "wait",       "frames": 15},
+    {"action": "screenshot", "label": "08-eth-results"},
+
+    {"action": "click",      "x": 240, "y": 179},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "09-selected-ether"},
+
+    {"action": "click",      "x": 502, "y": 110},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "10-icon-hidden"},
+
+    {"action": "click",      "x": 502, "y": 110},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "11-icon-shown"},
+
+    {"action": "click",      "x": 502, "y": 147},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "12-clear-btn-hidden"},
+
+    {"action": "click",      "x": 502, "y": 147},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "13-clear-btn-restored"}
+  ]
+}

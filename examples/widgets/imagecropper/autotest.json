@@ -1,0 +1,12 @@
+{
+  "steps": [
+    {"action": "screenshot", "label": "initial"},
+    {"action": "wait", "frames": 5},
+    {"action": "drag", "fromX": 356, "fromY": 362, "toX": 300, "toY": 310, "frames": 15},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "after-resize"},
+    {"action": "drag", "fromX": 200, "fromY": 220, "toX": 150, "toY": 180, "frames": 15},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "after-move"}
+  ]
+}

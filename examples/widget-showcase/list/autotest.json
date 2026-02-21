@@ -1,0 +1,48 @@
+{
+  "show_cursor": true,
+  "steps": [
+    {"action": "move", "x": 325, "y": [-5, 245]},
+
+    {"action": "wait", "ms": 500},
+    {"action": "start_gif", "label": "list", "x": 0, "y": 0, "width": 320, "height": 240, "maxWidth": 320, "maxHeight": 240, "fps": 30, "dropEvery": 1, "noDedup": true, "noDiff": true, "noDownscale": true},
+
+    {"action": "wait", "ms": 300},
+
+    {"action": "move", "x": 160, "y": 54, "tween": 300},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 100},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 200},
+    {"action": "move", "x": [250, 310], "y": [40, 80], "tween": 200},
+    {"action": "wait", "ms": 300},
+
+    {"action": "move", "x": 160, "y": 102, "tween": 200},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 100},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 200},
+    {"action": "move", "x": [250, 310], "y": [120, 180], "tween": 200},
+    {"action": "wait", "ms": 300},
+
+    {"action": "move", "x": 252, "y": 45, "tween": 200},
+    {"action": "wait", "ms": 150},
+    {"action": "drag", "fromX": 252, "fromY": 45, "toX": 252, "toY": 160, "ms": 600},
+    {"action": "wait", "ms": 300},
+    {"action": "drag", "fromX": 252, "fromY": 160, "toX": 252, "toY": 80, "ms": 400},
+    {"action": "wait", "ms": 300},
+
+    {"action": "move", "x": 160, "y": 150, "tween": 200},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 100},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 200},
+
+    {"action": "move", "x": 325, "y": [-5, 245], "tween": 300},
+    {"action": "wait", "ms": 300},
+
+    {"action": "stop_gif"}
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "show_cursor": true,
+  "steps": [
+    {"action": "move", "x": -5, "y": [-5, 245]},
+
+    {"action": "wait", "ms": 500},
+    {"action": "start_gif", "label": "text-area", "x": 0, "y": 0, "width": 320, "height": 240, "maxWidth": 320, "maxHeight": 240, "fps": 30, "dropEvery": 1, "noDedup": true, "noDiff": true, "noDownscale": true},
+
+    {"action": "wait", "ms": 300},
+
+    {"action": "move", "x": 160, "y": 100, "tween": 300},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 100},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 300},
+
+    {"action": "move", "x": [250, 310], "y": [30, 60], "tween": 200},
+    {"action": "wait", "ms": 200},
+
+    {"action": "type", "text": "The quick brown fox", "delay": 50},
+    {"action": "key", "key": "Enter"},
+    {"action": "wait", "ms": 150},
+    {"action": "type", "text": "jumps over the lazy", "delay": 50},
+    {"action": "key", "key": "Enter"},
+    {"action": "wait", "ms": 150},
+    {"action": "type", "text": "dog.", "delay": 60},
+    {"action": "wait", "ms": 500},
+
+    {"action": "move", "x": 138, "y": 89, "tween": 250},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 50},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 80},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 50},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 400},
+
+    {"action": "move", "x": [250, 310], "y": [30, 60], "tween": 200},
+    {"action": "wait", "ms": 200},
+
+    {"action": "type", "text": "happy", "delay": 80},
+    {"action": "wait", "ms": 500},
+
+    {"action": "move", "x": [40, 280], "y": [180, 220], "tween": 200},
+    {"action": "wait", "ms": 150},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 100},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 500},
+
+    {"action": "move", "x": -5, "y": [-5, 245], "tween": 300},
+    {"action": "wait", "ms": 300},
+
+    {"action": "stop_gif"}
+  ]
+}

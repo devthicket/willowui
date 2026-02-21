@@ -1,0 +1,18 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "kb-initial"},
+
+    {"action": "click", "x": 280, "y": 86},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "kb-jump-listening"},
+
+    {"action": "click", "x": 280, "y": 230},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "kb-attack-listening"},
+
+    {"action": "click", "x": 370, "y": 134},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "kb-clear-moveleft"}
+  ]
+}

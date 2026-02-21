@@ -1,0 +1,66 @@
+<Panel layout="vbox" spacing="14" padding="16,20">
+
+	<!-- ── 1. Text binding: plain Ref and ternary expression ── -->
+	<Label text="1 - TEXT:  bind:text with Ref + ternary expression" />
+	<Panel layout="hbox" spacing="10">
+		<TextInput width="220" placeholder="Your name..." bind:value="name" />
+		<Label bind:text="name != '' ? 'Hello, ' + name + '!' : 'Type something...'" />
+	</Panel>
+
+	<!-- ── 2. Bool binding: Toggle + Checkbox ── -->
+	<Label text="2 - BOOL:  Toggle.BindValue, Checkbox.BindValue" />
+	<Panel layout="hbox" spacing="20">
+		<Toggle bind:value="enabled" />
+		<Label text="Enable controls" />
+		<Checkbox text="Accept terms" bind:checked="agreed" />
+		<Label bind:text="agreed ? '✓ Accepted' : '✗ Not yet'" />
+	</Panel>
+
+	<!-- ── 3. Numeric pipeline: Slider + ProgressBar on the same Ref ── -->
+	<Label text="3 - NUMERIC:  Slider + ProgressBar share one Ref[float64]" />
+	<Slider width="300" bind:value="volume" bind:enabled="enabled" />
+	<ProgressBar width="300" bind:value="volume" />
+	<Label bind:text="volumeLabel" />
+
+	<!-- ── 4. Selection widgets: bind:selected ── -->
+	<Label text="4 - SELECTION:  bind:selected on Select, OptionRotator, Radio, TabBar" />
+	<Panel layout="hbox" spacing="12">
+		<Select options="Warrior,Mage,Rogue,Paladin" width="180"
+			bind:selected="classIndex" bind:enabled="enabled" />
+		<OptionRotator options="Easy,Normal,Hard,Nightmare" width="220"
+			bind:selected="diffIndex" bind:enabled="enabled" />
+	</Panel>
+
+	<!-- Radio + TabBar sharing sizeIndex from the controller -->
+	<Panel layout="hbox" spacing="20">
+		<Radio bind:selected="sizeIndex" bind:enabled="enabled">
+			<RadioButton label="Small" />
+			<RadioButton label="Medium" />
+			<RadioButton label="Large" />
+		</Radio>
+		<TabBar size="240,36" bind:selected="sizeIndex" bind:enabled="enabled">
+			<Tab label="Small" />
+			<Tab label="Medium" />
+			<Tab label="Large" />
+		</TabBar>
+	</Panel>
+
+	<!-- Summary label: computed string from controller -->
+	<Label bind:text="summary" />
+
+	<!-- ── 5. Conditional: ui:show toggled by controller ── -->
+	<Label text="5 - CONDITIONAL:  ui:show reacts to Ref[bool]" />
+	<Panel ui:show="agreed">
+		<Label text="Terms accepted -- visible only when agreed = true" />
+	</Panel>
+
+	<!-- ── 6. Buttons to drive ref changes from the controller side ── -->
+	<Label text="6 - CONTROLLER-DRIVEN:  buttons mutate refs; template reacts" />
+	<Panel layout="hbox" spacing="8">
+		<Button text="Next class"      on:click="nextClass" />
+		<Button text="Next difficulty" on:click="nextDiff" />
+		<Button text="Cycle size"      on:click="cycleSize" />
+		<Button text="Toggle enable"   on:click="toggleEnable" />
+	</Panel>
+
+</Panel>

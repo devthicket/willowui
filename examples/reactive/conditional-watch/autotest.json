@@ -1,0 +1,12 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "initial-server-a"},
+    {"action": "click", "x": 490, "y": 390},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "switched-server-b"},
+    {"action": "click", "x": 380, "y": 390},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "back-to-server-a"}
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "01-initial"},
+
+    {"action": "click",      "x": 110, "y": 104},
+    {"action": "wait",       "frames": 8},
+    {"action": "screenshot", "label": "02-click-devices"},
+
+    {"action": "click",      "x": 110, "y": 148},
+    {"action": "wait",       "frames": 8},
+    {"action": "screenshot", "label": "03-click-phone"},
+
+    {"action": "click",      "x": 110, "y": 192},
+    {"action": "wait",       "frames": 8},
+    {"action": "screenshot", "label": "04-click-network"},
+
+    {"action": "click",      "x": 110, "y": 280},
+    {"action": "wait",       "frames": 8},
+    {"action": "screenshot", "label": "05-click-apps"},
+
+    {"action": "click",      "x": 110, "y": 60},
+    {"action": "wait",       "frames": 8},
+    {"action": "screenshot", "label": "06-back-to-system"},
+
+    {"action": "click",      "x": 288, "y": 160},
+    {"action": "wait",       "frames": 8},
+    {"action": "screenshot", "label": "07-scale-100"},
+
+    {"action": "click",      "x": 528, "y": 160},
+    {"action": "wait",       "frames": 8},
+    {"action": "screenshot", "label": "08-scale-175"}
+  ]
+}

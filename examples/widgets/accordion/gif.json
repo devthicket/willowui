@@ -1,0 +1,54 @@
+{
+  "steps": [
+    {
+      "action": "wait",
+      "frames": 30
+    },
+    {
+      "action": "start_gif",
+      "label": "accordion",
+      "x": 10,
+      "y": 55,
+      "width": 373,
+      "height": 280,
+      "maxWidth": 320,
+      "maxHeight": 240,
+      "fps": 20,
+      "dropEvery": 2
+    },
+    {
+      "action": "wait",
+      "frames": 20
+    },
+    {
+      "action": "click",
+      "x": 194,
+      "y": 170
+    },
+    {
+      "action": "wait",
+      "frames": 40
+    },
+    {
+      "action": "click",
+      "x": 194,
+      "y": 206
+    },
+    {
+      "action": "wait",
+      "frames": 40
+    },
+    {
+      "action": "click",
+      "x": 194,
+      "y": 110
+    },
+    {
+      "action": "wait",
+      "frames": 40
+    },
+    {
+      "action": "stop_gif"
+    }
+  ]
+}

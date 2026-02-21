@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!--
+    WillowUI XML Template Schema
+    Provides IDE autocomplete, validation, and documentation for WillowUI XML templates.
+
+    Usage: add to your root element:
+      <Panel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:bind="https://willowui.dev/bind"
+             xmlns:on="https://willowui.dev/on"
+             xmlns:ui="https://willowui.dev/ui"
+             xsi:noNamespaceSchemaLocation="path/to/willowui.xsd"
+             layout="vbox">
+
+    The bind:, on:, and ui: prefixed attributes are allowed via anyAttribute.
+    Tag names and static attributes get full autocomplete and validation.
+  -->
+
+  <!-- ============================================================ -->
+  <!-- Shared types                                                  -->
+  <!-- ============================================================ -->
+
+  <xs:simpleType name="layoutType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="vbox"/>
+      <xs:enumeration value="hbox"/>
+      <xs:enumeration value="grid"/>
+      <xs:enumeration value="flow"/>
+      <xs:enumeration value="anchor"/>
+      <xs:enumeration value="none"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="alignmentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="left"/>
+      <xs:enumeration value="center"/>
+      <xs:enumeration value="right"/>
+      <xs:enumeration value="top"/>
+      <xs:enumeration value="bottom"/>
+      <xs:enumeration value="stretch"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="textAlignType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="left"/>
+      <xs:enumeration value="center"/>
+      <xs:enumeration value="right"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="orientationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="horizontal"/>
+      <xs:enumeration value="vertical"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="variantType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="primary"/>
+      <xs:enumeration value="success"/>
+      <xs:enumeration value="warning"/>
+      <xs:enumeration value="danger"/>
+      <xs:enumeration value="neutral"/>
+      <xs:enumeration value="muted"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="anchorType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="top-left"/>
+      <xs:enumeration value="top-center"/>
+      <xs:enumeration value="top-right"/>
+      <xs:enumeration value="middle-left"/>
+      <xs:enumeration value="center"/>
+      <xs:enumeration value="middle-right"/>
+      <xs:enumeration value="bottom-left"/>
+      <xs:enumeration value="bottom-center"/>
+      <xs:enumeration value="bottom-right"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="badgeKindType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="default"/>
+      <xs:enumeration value="primary"/>
+      <xs:enumeration value="success"/>
+      <xs:enumeration value="warning"/>
+      <xs:enumeration value="danger"/>
+      <xs:enumeration value="neutral"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="axisType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="x"/>
+      <xs:enumeration value="y"/>
+      <xs:enumeration value="diagonal"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="gripStyleType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="dots"/>
+      <xs:enumeration value="lines"/>
+      <xs:enumeration value="none"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="scaleModeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="stretch"/>
+      <xs:enumeration value="fit"/>
+      <xs:enumeration value="fill"/>
+      <xs:enumeration value="center"/>
+      <xs:enumeration value="tile"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="overflowModeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="scroll"/>
+      <xs:enumeration value="clip"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="handleSideType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="left"/>
+      <xs:enumeration value="right"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="booleanType">
+    <xs:annotation>
+      <xs:documentation>Boolean value: "true" or "false"</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="true"/>
+      <xs:enumeration value="false"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- ============================================================ -->
+  <!-- Common attributes (shared by all components)                  -->
+  <!-- ============================================================ -->
+
+  <xs:attributeGroup name="commonAttrs">
+    <xs:attribute name="x" type="xs:decimal">
+      <xs:annotation><xs:documentation>Horizontal offset</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="y" type="xs:decimal">
+      <xs:annotation><xs:documentation>Vertical offset</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="width" type="xs:decimal">
+      <xs:annotation><xs:documentation>Element width in pixels</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="height" type="xs:decimal">
+      <xs:annotation><xs:documentation>Element height in pixels</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="size" type="xs:string">
+      <xs:annotation><xs:documentation>Shorthand: "width,height" (e.g. "200,36")</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="enabled" type="booleanType">
+      <xs:annotation><xs:documentation>Enable or disable interaction</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="visible" type="booleanType">
+      <xs:annotation><xs:documentation>Show or hide the element</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="layout" type="layoutType">
+      <xs:annotation><xs:documentation>Child layout mode</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="spacing" type="xs:decimal">
+      <xs:annotation><xs:documentation>Gap between children (pixels)</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="gridColumns" type="xs:integer">
+      <xs:annotation><xs:documentation>Number of columns in grid layout</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="flow-row-gap" type="xs:decimal">
+      <xs:annotation><xs:documentation>Row gap in flow layout (pixels)</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="padding" type="xs:string">
+      <xs:annotation><xs:documentation>Inner padding: "all" or "h,v" or "t,r,b,l"</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="margin" type="xs:string">
+      <xs:annotation><xs:documentation>Outer margin: "all" or "h,v" or "t,r,b,l"</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="align" type="alignmentType">
+      <xs:annotation><xs:documentation>Child alignment</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="justify" type="alignmentType">
+      <xs:annotation><xs:documentation>Content justification</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="minWidth" type="xs:decimal"/>
+    <xs:attribute name="minHeight" type="xs:decimal"/>
+    <xs:attribute name="maxWidth" type="xs:decimal"/>
+    <xs:attribute name="maxHeight" type="xs:decimal"/>
+    <xs:attribute name="zIndex" type="xs:integer">
+      <xs:annotation><xs:documentation>Rendering order (higher = on top)</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="variant" type="xs:string">
+      <xs:annotation><xs:documentation>Theme variant: primary, success, warning, danger, neutral, muted, or custom</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="font" type="xs:string">
+      <xs:annotation><xs:documentation>Font name (must be registered with the template registry)</xs:documentation></xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="anchor" type="anchorType">
+      <xs:annotation><xs:documentation>Anchor position (only inside AnchorLayout)</xs:documentation></xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+
+  <!--
+    Prefixed attributes (bind:*, on:*, ui:*) are handled via xs:anyAttribute.
+    Users must declare the namespaces on their root element:
+      xmlns:bind="https://willowui.dev/bind"
+      xmlns:on="https://willowui.dev/on"
+      xmlns:ui="https://willowui.dev/ui"
+
+    Supported prefixed attributes (for reference):
+      bind:text, bind:value, bind:enabled, bind:visible, bind:checked,
+      bind:selected, bind:variant, bind:color, bind:markup
+      on:click, on:change, on:submit, on:blur, on:clear, on:close
+      ui:if, ui:else-if, ui:else, ui:for, ui:show, ui:key, ui:ref
+  -->
+
+  <!-- ============================================================ -->
+  <!-- Reusable group: all shared attrs                              -->
+  <!-- ============================================================ -->
+
+  <xs:attributeGroup name="allSharedAttrs">
+    <xs:attributeGroup ref="commonAttrs"/>
+    <xs:anyAttribute namespace="##other" processContents="skip"/>
+  </xs:attributeGroup>
+
+  <!-- ============================================================ -->
+  <!-- Group of all component element refs (for children)            -->
+  <!-- ============================================================ -->
+
+  <xs:group name="anyComponent">
+    <xs:choice>
+      <xs:element ref="Panel"/>
+      <xs:element ref="Component"/>
+      <xs:element ref="Spacer"/>
+      <xs:element ref="AnchorLayout"/>
+      <xs:element ref="TwoColumnLayout"/>
+      <xs:element ref="Label"/>
+      <xs:element ref="Badge"/>
+      <xs:element ref="RichText"/>
+      <xs:element ref="Image"/>
+      <xs:element ref="Button"/>
+      <xs:element ref="IconButton"/>
+      <xs:element ref="Toggle"/>
+      <xs:element ref="Checkbox"/>
+      <xs:element ref="TextInput"/>
+      <xs:element ref="MaskedInput"/>
+      <xs:element ref="TextArea"/>
+      <xs:element ref="SearchBox"/>
+      <xs:element ref="InputField"/>
+      <xs:element ref="NumberStepper"/>
+      <xs:element ref="Slider"/>
+      <xs:element ref="ScrollBar"/>
+      <xs:element ref="ProgressBar"/>
+      <xs:element ref="MeterBar"/>
+      <xs:element ref="List"/>
+      <xs:element ref="TileList"/>
+      <xs:element ref="TreeList"/>
+      <xs:element ref="SortableList"/>
+      <xs:element ref="TabBar"/>
+      <xs:element ref="ToggleButtonBar"/>
+      <xs:element ref="Radio"/>
+      <xs:element ref="Select"/>
+      <xs:element ref="OptionRotator"/>
+      <xs:element ref="ScrollPanel"/>
+      <xs:element ref="Window"/>
+      <xs:element ref="DragHandle"/>
+      <xs:element ref="StatWeb"/>
+      <xs:element ref="Accordion"/>
+    </xs:choice>
+  </xs:group>
+
+  <!-- ============================================================ -->
+  <!-- Component elements                                            -->
+  <!-- ============================================================ -->
+
+  <!-- Component (base) -->
+  <xs:element name="Component">
+    <xs:annotation><xs:documentation>Base component wrapper</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded"><xs:group ref="anyComponent"/></xs:sequence>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Spacer -->
+  <xs:element name="Spacer">
+    <xs:annotation><xs:documentation>Empty space element for layout spacing</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Panel -->
+  <xs:element name="Panel">
+    <xs:annotation><xs:documentation>General-purpose container with background, border, and corner radius</xs:documentation></xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:sequence minOccurs="0" maxOccurs="unbounded"><xs:group ref="anyComponent"/></xs:sequence>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="background" type="xs:string">
+        <xs:annotation><xs:documentation>Background color (hex: "#1a1c22")</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="border" type="xs:string">
+        <xs:annotation><xs:documentation>Border: "color,width" (e.g. "#fff,2")</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="cornerRadius" type="xs:decimal">
+        <xs:annotation><xs:documentation>Corner radius (-1 = full pill)</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="alignItems" type="alignmentType">
+        <xs:annotation><xs:documentation>Cross-axis alignment of children</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="justifyContent" type="alignmentType">
+        <xs:annotation><xs:documentation>Main-axis alignment of children</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- AnchorLayout -->
+  <xs:element name="AnchorLayout">
+    <xs:annotation><xs:documentation>Positional layout with 9-point anchoring for children</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded"><xs:group ref="anyComponent"/></xs:sequence>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="background" type="xs:string"/>
+      <xs:attribute name="border" type="xs:string"/>
+      <xs:attribute name="cornerRadius" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- TwoColumnLayout -->
+  <xs:element name="TwoColumnLayout">
+    <xs:annotation><xs:documentation>Two-column form layout — children are paired as left/right rows</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded"><xs:group ref="anyComponent"/></xs:sequence>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="background" type="xs:string"/>
+      <xs:attribute name="border" type="xs:string"/>
+      <xs:attribute name="gap" type="xs:decimal">
+        <xs:annotation><xs:documentation>Horizontal gap between columns</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="rowSpacing" type="xs:decimal">
+        <xs:annotation><xs:documentation>Vertical spacing between rows</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="leftWidth" type="xs:decimal">
+        <xs:annotation><xs:documentation>Fixed width for the left column</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="columnRatio" type="xs:decimal">
+        <xs:annotation><xs:documentation>Ratio of left to right column (e.g. 0.4)</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="leftAlign" type="alignmentType"/>
+      <xs:attribute name="rightAlign" type="alignmentType"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Label -->
+  <xs:element name="Label">
+    <xs:annotation><xs:documentation>Text display label</xs:documentation></xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="text" type="xs:string">
+        <xs:annotation><xs:documentation>Display text</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="color" type="xs:string">
+        <xs:annotation><xs:documentation>Text color (hex)</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="wrapWidth" type="xs:decimal">
+        <xs:annotation><xs:documentation>Word-wrap width in pixels</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Badge -->
+  <xs:element name="Badge">
+    <xs:annotation><xs:documentation>Colored badge for counts, labels, or dot indicators</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="text" type="xs:string">
+        <xs:annotation><xs:documentation>Badge text or count</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="dotMode" type="booleanType">
+        <xs:annotation><xs:documentation>Show as a dot instead of text</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="kind" type="badgeKindType">
+        <xs:annotation><xs:documentation>Badge color scheme</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- RichText -->
+  <xs:element name="RichText">
+    <xs:annotation><xs:documentation>Markup-enabled rich text display (supports b, i, u, color, size, etc.)</xs:documentation></xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:any processContents="skip"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="markup" type="xs:string">
+        <xs:annotation><xs:documentation>Markup string (auto-populated from children)</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="wrapWidth" type="xs:decimal"/>
+      <xs:attribute name="color" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Image -->
+  <xs:element name="Image">
+    <xs:annotation><xs:documentation>Image display with scaling modes</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="scaleMode" type="scaleModeType">
+        <xs:annotation><xs:documentation>How the image fills its bounds</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="cornerRadius" type="xs:decimal"/>
+      <xs:attribute name="alpha" type="xs:decimal">
+        <xs:annotation><xs:documentation>Opacity (0.0 to 1.0)</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Button -->
+  <xs:element name="Button">
+    <xs:annotation><xs:documentation>Standard clickable button</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="text" type="xs:string">
+        <xs:annotation><xs:documentation>Button label</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- IconButton -->
+  <xs:element name="IconButton">
+    <xs:annotation><xs:documentation>Icon-only button (no text label)</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Toggle -->
+  <xs:element name="Toggle">
+    <xs:annotation><xs:documentation>Boolean toggle switch</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="value" type="booleanType">
+        <xs:annotation><xs:documentation>Toggle state</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Checkbox -->
+  <xs:element name="Checkbox">
+    <xs:annotation><xs:documentation>Checkbox with label</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="text" type="xs:string">
+        <xs:annotation><xs:documentation>Checkbox label</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="checked" type="booleanType">
+        <xs:annotation><xs:documentation>Checked state</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- TextInput -->
+  <xs:element name="TextInput">
+    <xs:annotation><xs:documentation>Single-line text input field</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="value" type="xs:string">
+        <xs:annotation><xs:documentation>Current text value</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="placeholder" type="xs:string">
+        <xs:annotation><xs:documentation>Placeholder text shown when empty</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="maxLength" type="xs:integer">
+        <xs:annotation><xs:documentation>Maximum character count</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- MaskedInput -->
+  <xs:element name="MaskedInput">
+    <xs:annotation><xs:documentation>Text input with mask pattern (e.g. phone: "(999) 999-9999")</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="mask" type="xs:string">
+        <xs:annotation><xs:documentation>Mask pattern (9=digit, a=letter, *=any)</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value" type="xs:string">
+        <xs:annotation><xs:documentation>Formatted value</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="rawValue" type="xs:string">
+        <xs:annotation><xs:documentation>Unmasked value (digits/letters only)</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="placeholder" type="xs:string"/>
+      <xs:attribute name="maskPlaceholder" type="xs:string">
+        <xs:annotation><xs:documentation>Single character used for unfilled mask positions (default: _)</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="maxLength" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- TextArea -->
+  <xs:element name="TextArea">
+    <xs:annotation><xs:documentation>Multi-line text input</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="value" type="xs:string"/>
+      <xs:attribute name="maxLength" type="xs:integer"/>
+      <xs:attribute name="rows" type="xs:integer">
+        <xs:annotation><xs:documentation>Number of visible text rows</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- SearchBox -->
+  <xs:element name="SearchBox">
+    <xs:annotation><xs:documentation>Search input with debounce and filtering</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="value" type="xs:string"/>
+      <xs:attribute name="placeholder" type="xs:string"/>
+      <xs:attribute name="debounceMs" type="xs:integer">
+        <xs:annotation><xs:documentation>Debounce delay in milliseconds</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="minQueryLength" type="xs:integer">
+        <xs:annotation><xs:documentation>Minimum characters before search fires</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="showSearchIcon" type="booleanType"/>
+      <xs:attribute name="showClearButton" type="booleanType"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- InputField -->
+  <xs:element name="InputField">
+    <xs:annotation><xs:documentation>Labeled input field (label + text input wrapper)</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="label" type="xs:string">
+        <xs:annotation><xs:documentation>Field label text</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="value" type="xs:string"/>
+      <xs:attribute name="placeholder" type="xs:string"/>
+      <xs:attribute name="required" type="booleanType">
+        <xs:annotation><xs:documentation>Mark field as required</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- NumberStepper -->
+  <xs:element name="NumberStepper">
+    <xs:annotation><xs:documentation>Number input with +/- increment buttons</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="value" type="xs:decimal"/>
+      <xs:attribute name="min" type="xs:decimal"/>
+      <xs:attribute name="max" type="xs:decimal"/>
+      <xs:attribute name="step" type="xs:decimal">
+        <xs:annotation><xs:documentation>Increment per click</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="pageStep" type="xs:decimal">
+        <xs:annotation><xs:documentation>Large step (Page Up/Down)</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="decimals" type="xs:integer">
+        <xs:annotation><xs:documentation>Number of decimal places to display</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Slider -->
+  <xs:element name="Slider">
+    <xs:annotation><xs:documentation>Draggable range slider</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="value" type="xs:decimal"/>
+      <xs:attribute name="range" type="xs:string">
+        <xs:annotation><xs:documentation>Value range: "min,max" (e.g. "0,100")</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="step" type="xs:decimal"/>
+      <xs:attribute name="orientation" type="orientationType"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- ScrollBar -->
+  <xs:element name="ScrollBar">
+    <xs:annotation><xs:documentation>Standalone scrollbar control</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="value" type="xs:decimal"/>
+      <xs:attribute name="orientation" type="orientationType"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- ProgressBar -->
+  <xs:element name="ProgressBar">
+    <xs:annotation><xs:documentation>Linear progress indicator (value 0.0 to 1.0)</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="value" type="xs:decimal">
+        <xs:annotation><xs:documentation>Progress value (0.0 to 1.0)</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- MeterBar -->
+  <xs:element name="MeterBar">
+    <xs:annotation><xs:documentation>Multi-range meter display</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="value" type="xs:decimal"/>
+      <xs:attribute name="range" type="xs:string">
+        <xs:annotation><xs:documentation>Value range: "min,max"</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- List -->
+  <xs:element name="List">
+    <xs:annotation><xs:documentation>Vertical scrollable list</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="selected" type="xs:integer">
+        <xs:annotation><xs:documentation>Selected item index</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="itemHeight" type="xs:decimal">
+        <xs:annotation><xs:documentation>Height of each list item (default: 30)</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- TileList -->
+  <xs:element name="TileList">
+    <xs:annotation><xs:documentation>Grid-based tile list</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="selected" type="xs:integer"/>
+      <xs:attribute name="tileWidth" type="xs:decimal">
+        <xs:annotation><xs:documentation>Width of each tile (default: 64)</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="tileHeight" type="xs:decimal">
+        <xs:annotation><xs:documentation>Height of each tile (default: 64)</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- TreeList -->
+  <xs:element name="TreeList">
+    <xs:annotation><xs:documentation>Hierarchical tree list with expand/collapse</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="itemHeight" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- SortableList -->
+  <xs:element name="SortableList">
+    <xs:annotation><xs:documentation>List with drag-to-reorder support</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="selected" type="xs:integer"/>
+      <xs:attribute name="itemHeight" type="xs:decimal"/>
+      <xs:attribute name="showHandles" type="booleanType">
+        <xs:annotation><xs:documentation>Show drag handle icons</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="dragEnabled" type="booleanType"/>
+      <xs:attribute name="keyboardReorderEnabled" type="booleanType"/>
+      <xs:attribute name="handleSide" type="handleSideType">
+        <xs:annotation><xs:documentation>Which side to show the drag handle</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- TabBar -->
+  <xs:element name="TabBar">
+    <xs:annotation><xs:documentation>Tabbed interface — children must be Tab elements</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Tab"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="selected" type="xs:integer">
+        <xs:annotation><xs:documentation>Active tab index</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="overflowMode" type="overflowModeType"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Tab (pseudo-element, only valid inside TabBar) -->
+  <xs:element name="Tab">
+    <xs:annotation><xs:documentation>Tab page — only valid inside TabBar. Children become the tab's content.</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded"><xs:group ref="anyComponent"/></xs:sequence>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="label" type="xs:string">
+        <xs:annotation><xs:documentation>Tab button label</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- ToggleButtonBar -->
+  <xs:element name="ToggleButtonBar">
+    <xs:annotation><xs:documentation>Group of mutually-exclusive toggle buttons</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="buttons" type="xs:string">
+        <xs:annotation><xs:documentation>Comma-separated button labels (e.g. "Small,Medium,Large")</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="selected" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Radio -->
+  <xs:element name="Radio">
+    <xs:annotation><xs:documentation>Radio button group -- children must be RadioButton elements</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="RadioButton"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="selected" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- RadioButton (pseudo-element, only valid inside Radio) -->
+  <xs:element name="RadioButton">
+    <xs:annotation><xs:documentation>Radio option -- only valid inside Radio</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attribute name="label" type="xs:string">
+        <xs:annotation><xs:documentation>Option label text</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Select -->
+  <xs:element name="Select">
+    <xs:annotation><xs:documentation>Dropdown selector</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="options" type="xs:string">
+        <xs:annotation><xs:documentation>Comma-separated options (e.g. "Warrior,Mage,Rogue")</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="selected" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- OptionRotator -->
+  <xs:element name="OptionRotator">
+    <xs:annotation><xs:documentation>Cyclic option selector with prev/next arrows</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="options" type="xs:string">
+        <xs:annotation><xs:documentation>Comma-separated options</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="selected" type="xs:integer"/>
+      <xs:attribute name="wrap" type="booleanType">
+        <xs:annotation><xs:documentation>Cycle back to start at the end</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- ScrollPanel -->
+  <xs:element name="ScrollPanel">
+    <xs:annotation><xs:documentation>Scrollable container panel</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded"><xs:group ref="anyComponent"/></xs:sequence>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="background" type="xs:string"/>
+      <xs:attribute name="scrollX" type="xs:decimal"/>
+      <xs:attribute name="scrollY" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Window -->
+  <xs:element name="Window">
+    <xs:annotation><xs:documentation>Draggable, resizable window container</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded"><xs:group ref="anyComponent"/></xs:sequence>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="title" type="xs:string">
+        <xs:annotation><xs:documentation>Window title bar text</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="resizable" type="booleanType"/>
+      <xs:attribute name="movable" type="booleanType"/>
+      <xs:attribute name="modal" type="booleanType"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- DragHandle -->
+  <xs:element name="DragHandle">
+    <xs:annotation><xs:documentation>Drag handle for resizing or repositioning</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="axis" type="axisType">
+        <xs:annotation><xs:documentation>Constrain drag to an axis</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="min" type="xs:decimal">
+        <xs:annotation><xs:documentation>Minimum drag position</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="max" type="xs:decimal">
+        <xs:annotation><xs:documentation>Maximum drag position</xs:documentation></xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="gripStyle" type="gripStyleType">
+        <xs:annotation><xs:documentation>Visual grip indicator style</xs:documentation></xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- StatWeb -->
+  <xs:element name="StatWeb">
+    <xs:annotation><xs:documentation>Statistics/status web widget</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Accordion -->
+  <xs:element name="Accordion">
+    <xs:annotation><xs:documentation>Vertically stacked collapsible sections</xs:documentation></xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Section">
+          <xs:annotation><xs:documentation>A collapsible section within an Accordion</xs:documentation></xs:annotation>
+          <xs:complexType>
+            <xs:group ref="anyComponent" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="label" type="xs:string"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attributeGroup ref="allSharedAttrs"/>
+      <xs:attribute name="exclusive" type="xs:string"/>
+      <xs:attribute name="animated" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

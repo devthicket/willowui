@@ -1,0 +1,32 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "01-initial"},
+
+    {"action": "click", "x": 90, "y": 152},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "02-removed-typescript"},
+
+    {"action": "click", "x": 60, "y": 212},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "03-toggled-opensource"},
+
+    {"action": "click", "x": 200, "y": 292},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "04-focused-tagbar"},
+
+    {"action": "type", "text": "hello"},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "05-typed-hello"},
+
+    {"action": "key", "key": "space"},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "06-created-hello-tag"},
+
+    {"action": "type", "text": "world"},
+    {"action": "wait", "frames": 3},
+    {"action": "key", "key": "space"},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "07-created-two-tags"}
+  ]
+}

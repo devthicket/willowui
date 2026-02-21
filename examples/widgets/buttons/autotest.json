@@ -1,0 +1,28 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click", "x": 110, "y": 254},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-increment-1"},
+
+    {"action": "click", "x": 110, "y": 254},
+    {"action": "wait", "frames": 3},
+    {"action": "click", "x": 110, "y": 254},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-increment-3"},
+
+    {"action": "click", "x": 380, "y": 254},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "after-disabled-click"},
+
+    {"action": "click", "x": 250, "y": 254},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-reset"},
+
+    {"action": "click", "x": 64, "y": 444},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-icon-click"}
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click",      "x": 140, "y": 92},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "select-apple"},
+
+    {"action": "click",      "x": 140, "y": 148},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "select-cherry"},
+
+    {"action": "click",      "x": 185, "y": 335},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "next"},
+
+    {"action": "click",      "x": 185, "y": 335},
+    {"action": "click",      "x": 185, "y": 335},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "next-next"},
+
+    {"action": "click",      "x": 280, "y": 335},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "cleared"},
+
+    {"action": "click",      "x": 90,  "y": 335},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "scroll-to-bottom"},
+
+    {"action": "click",      "x": 90,  "y": 335},
+    {"action": "click",      "x": 90,  "y": 335},
+    {"action": "click",      "x": 90,  "y": 335},
+    {"action": "click",      "x": 90,  "y": 335},
+    {"action": "click",      "x": 90,  "y": 335},
+    {"action": "click",      "x": 90,  "y": 335},
+    {"action": "click",      "x": 90,  "y": 335},
+    {"action": "click",      "x": 90,  "y": 335},
+    {"action": "click",      "x": 90,  "y": 335},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "scroll-to-top"}
+  ]
+}

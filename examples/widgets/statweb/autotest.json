@@ -1,0 +1,20 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click", "x": 140, "y": 194},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "click-readonly-no-change"},
+
+    {"action": "drag", "fromX": 490, "fromY": 154, "toX": 490, "toY": 114, "frames": 20},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "alloc-atk-up-others-shrink"},
+
+    {"action": "drag", "fromX": 514, "fromY": 226, "toX": 504, "toY": 218, "frames": 20},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "alloc-spd-down-frees-points"},
+
+    {"action": "screenshot", "label": "final"}
+  ]
+}

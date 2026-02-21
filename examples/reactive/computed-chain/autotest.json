@@ -1,0 +1,22 @@
+{
+  "steps": [
+    {"action": "screenshot", "label": "initial"},
+    {"action": "click", "x": 298, "y": 96},
+    {"action": "click", "x": 298, "y": 96},
+    {"action": "click", "x": 298, "y": 96},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "str-13"},
+    {"action": "click", "x": 50, "y": 192},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "iron-equip"},
+    {"action": "click", "x": 50, "y": 220},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "steel-equip"},
+    {"action": "click", "x": 50, "y": 334},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "sharp-crit"},
+    {"action": "click", "x": 50, "y": 248},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "enchanted-equip"}
+  ]
+}

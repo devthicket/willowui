@@ -1,0 +1,27 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 30},
+    {"action": "start_gif", "label": "datatable", "x": 530, "y": 50, "width": 360, "height": 270, "maxWidth": 320, "maxHeight": 240, "fps": 20, "dropEvery": 2},
+    {"action": "wait", "frames": 15},
+
+    {"action": "click", "x": 672, "y": 59},
+    {"action": "wait", "frames": 25},
+
+    {"action": "click", "x": 672, "y": 59},
+    {"action": "wait", "frames": 25},
+
+    {"action": "click", "x": 176, "y": 132},
+    {"action": "wait", "frames": 15},
+    {"action": "click", "x": 176, "y": 216},
+    {"action": "wait", "frames": 15},
+    {"action": "click", "x": 176, "y": 384},
+    {"action": "wait", "frames": 15},
+
+    {"action": "drag", "fromX": 868, "fromY": 120, "toX": 868, "toY": 450, "frames": 30},
+    {"action": "wait", "frames": 15},
+    {"action": "drag", "fromX": 868, "fromY": 450, "toX": 868, "toY": 120, "frames": 30},
+    {"action": "wait", "frames": 20},
+
+    {"action": "stop_gif"}
+  ]
+}

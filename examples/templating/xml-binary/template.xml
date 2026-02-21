@@ -1,0 +1,10 @@
+<Panel layout="vbox" spacing="12">
+	<Label bind:text="title" />
+	<Label bind:text="statusText" />
+	<Button text="Increment" on:click="increment" />
+	<Button text="Reset" on:click="reset" />
+	<Panel ui:show="showExtra">
+		<Label text="Counter is above 3!" />
+	</Panel>
+	<Button bind:text="toggleLabel" on:click="toggleExtra" />
+</Panel>

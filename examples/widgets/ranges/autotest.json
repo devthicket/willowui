@@ -1,0 +1,18 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click", "x": 200, "y": 80},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-slider-click"},
+
+    {"action": "drag", "fromX": 200, "fromY": 80, "toX": 350, "toY": 80, "frames": 10},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-slider-drag"},
+
+    {"action": "click", "x": 200, "y": 300},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-progress-view"}
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "01-initial"},
+
+    {"action": "click", "x": 780, "y": 65},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "02-after-sort-score"},
+
+    {"action": "click", "x": 780, "y": 65},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "03-after-sort-score-desc"},
+
+    {"action": "click", "x": 600, "y": 65},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "04-after-sort-class"},
+
+    {"action": "drag", "fromX": 858, "fromY": 150, "toX": 858, "toY": 400, "frames": 20},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "05-after-scroll-down"},
+
+    {"action": "drag", "fromX": 858, "fromY": 400, "toX": 858, "toY": 150, "frames": 20},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "06-after-scroll-up"}
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "initial"},
+    {"action": "click", "x": 80, "y": 142},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "after-increment-1"},
+    {"action": "click", "x": 80, "y": 142},
+    {"action": "wait", "frames": 10},
+    {"action": "click", "x": 80, "y": 142},
+    {"action": "wait", "frames": 10},
+    {"action": "click", "x": 80, "y": 142},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "counter-above-3"},
+    {"action": "click", "x": 80, "y": 190},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "after-reset"}
+  ]
+}

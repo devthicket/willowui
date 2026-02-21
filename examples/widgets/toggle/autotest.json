@@ -1,0 +1,26 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 15},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click",      "x": 64, "y": 96},
+    {"action": "wait",       "frames": 10},
+    {"action": "screenshot", "label": "toggle-a-on"},
+
+    {"action": "click",      "x": 64, "y": 132},
+    {"action": "wait",       "frames": 10},
+    {"action": "screenshot", "label": "toggle-b-off"},
+
+    {"action": "click",      "x": 95,  "y": 232},
+    {"action": "wait",       "frames": 10},
+    {"action": "screenshot", "label": "force-on"},
+
+    {"action": "click",      "x": 215, "y": 232},
+    {"action": "wait",       "frames": 10},
+    {"action": "screenshot", "label": "force-off"},
+
+    {"action": "click",      "x": 320, "y": 232},
+    {"action": "wait",       "frames": 10},
+    {"action": "screenshot", "label": "flip"}
+  ]
+}

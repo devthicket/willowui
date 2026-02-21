@@ -1,0 +1,6 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "initial"}
+  ]
+}

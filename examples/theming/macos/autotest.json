@@ -1,0 +1,30 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "01-initial"},
+
+    {"action": "click",      "x": 120, "y": 122},
+    {"action": "wait",       "frames": 8},
+    {"action": "screenshot", "label": "02-click-bluetooth"},
+
+    {"action": "click",      "x": 120, "y": 166},
+    {"action": "wait",       "frames": 8},
+    {"action": "screenshot", "label": "03-click-network"},
+
+    {"action": "click",      "x": 120, "y": 518},
+    {"action": "wait",       "frames": 8},
+    {"action": "screenshot", "label": "04-click-displays"},
+
+    {"action": "click",      "x": 120, "y": 78},
+    {"action": "wait",       "frames": 8},
+    {"action": "screenshot", "label": "05-back-to-wifi"},
+
+    {"action": "click",      "x": 316, "y": 180},
+    {"action": "wait",       "frames": 8},
+    {"action": "screenshot", "label": "06-scale-more-space"},
+
+    {"action": "click",      "x": 508, "y": 180},
+    {"action": "wait",       "frames": 8},
+    {"action": "screenshot", "label": "07-scale-larger-text"}
+  ]
+}

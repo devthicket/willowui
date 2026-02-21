@@ -1,0 +1,82 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "01-initial"},
+
+    {"action": "click", "x": 160, "y": 94},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "02-select-item0"},
+
+    {"action": "click", "x": 160, "y": 122},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "03-select-item1"},
+
+    {"action": "click", "x": 69, "y": 525},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "04-sort-az"},
+
+    {"action": "click", "x": 160, "y": 94},
+    {"action": "wait", "frames": 2},
+    {"action": "click", "x": 157, "y": 493},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "05-remove-selected"},
+
+    {"action": "click", "x": 64, "y": 493},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "06-add-task"},
+
+    {"action": "click", "x": 162, "y": 525},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "07-shuffle-tasks"},
+
+    {"action": "click", "x": 244, "y": 525},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "08-clear-tasks"},
+
+    {"action": "click", "x": 64, "y": 493},
+    {"action": "wait", "frames": 2},
+    {"action": "click", "x": 64, "y": 493},
+    {"action": "wait", "frames": 2},
+    {"action": "click", "x": 64, "y": 493},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "09-add-three-tasks"},
+
+    {"action": "click", "x": 371, "y": 469},
+    {"action": "wait", "frames": 2},
+    {"action": "click", "x": 371, "y": 469},
+    {"action": "wait", "frames": 2},
+    {"action": "click", "x": 371, "y": 469},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "10-add-tiles"},
+
+    {"action": "click", "x": 489, "y": 469},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "11-remove-last-tile"},
+
+    {"action": "click", "x": 371, "y": 501},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "12-shuffle-tiles"},
+
+    {"action": "click", "x": 489, "y": 501},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "13-clear-tiles"},
+
+    {"action": "click", "x": 743, "y": 92},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "14-select-tree-root0"},
+
+    {"action": "click", "x": 798, "y": 469},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "15-add-child"},
+
+    {"action": "click", "x": 670, "y": 469},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "16-add-root"},
+
+    {"action": "click", "x": 743, "y": 92},
+    {"action": "wait", "frames": 2},
+    {"action": "click", "x": 670, "y": 501},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "17-remove-root"}
+  ]
+}

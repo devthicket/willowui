@@ -1,0 +1,39 @@
+package main
+
+import (
+	"log"
+
+	"github.com/devthicket/willow"
+	ui "github.com/devthicket/willowui"
+)
+
+const (
+	screenW = 320
+	screenH = 240
+)
+
+func main() {
+	font := ui.MustLoadDefaultFont()
+	theme, err := ui.LoadThemeRelative("../../_themes/dark.json")
+	if err != nil {
+		log.Fatalf("theme: %v", err)
+	}
+	ui.DefaultTheme = theme
+
+	screen := ui.NewScreen()
+
+	tp := ui.NewTimePicker("tp", font, 14)
+	tp.SetFormat(ui.TimeFormat12h)
+	tp.SetTime(2, 30, 0)
+	tp.SetSize(220, 90)
+	tp.SetPosition((screenW-220)/2, (screenH-90)/2)
+	screen.Add(tp)
+
+	ui.Stage.Add(screen)
+	ui.Setup(ui.StageConfig{
+		Title:      "TimePicker",
+		Width:      screenW,
+		Height:     screenH,
+		ClearColor: willow.RGBA(0.08, 0.08, 0.10, 1),
+	})
+}

@@ -1,0 +1,34 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "roster-top"},
+
+    {"action": "drag",       "fromX": 868, "fromY": 200, "toX": 868, "toY": 380, "frames": 20},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "roster-scrolled-mid"},
+
+    {"action": "drag",       "fromX": 868, "fromY": 380, "toX": 868, "toY": 200, "frames": 20},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "roster-scrolled-back-top"},
+
+    {"action": "click",      "x": 115, "y": 59},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "large-100-rows-top"},
+
+    {"action": "drag",       "fromX": 868, "fromY": 100, "toX": 868, "toY": 400, "frames": 30},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "large-scrolled-deep"},
+
+    {"action": "drag",       "fromX": 868, "fromY": 350, "toX": 868, "toY": 100, "frames": 30},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "large-scrolled-back"},
+
+    {"action": "click",      "x": 404, "y": 100},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "large-sorted-level-asc"},
+
+    {"action": "drag",       "fromX": 868, "fromY": 100, "toX": 868, "toY": 300, "frames": 20},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "large-sorted-scrolled"}
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "steps": [
+    {"action": "screenshot", "label": "01-initial"},
+
+    {"action": "click", "x": 65, "y": 85},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "02-date-click-slot0"},
+
+    {"action": "click", "x": 80, "y": 85},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "03-date-click-slot1"},
+
+    {"action": "click", "x": 95, "y": 85},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "04-date-click-slot2"},
+
+    {"action": "click", "x": 110, "y": 85},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "05-date-click-slot3"},
+
+    {"action": "click", "x": 150, "y": 85},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "06-date-click-blank-area"},
+
+    {"action": "click", "x": 65, "y": 155},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "07-invite-click-slot0"}
+  ]
+}

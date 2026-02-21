@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "class-unsorted"},
+
+    {"action": "click",      "x": 594, "y": 100},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "class-sort-attempt1"},
+
+    {"action": "click",      "x": 594, "y": 100},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "class-sort-attempt2"}
+  ]
+}

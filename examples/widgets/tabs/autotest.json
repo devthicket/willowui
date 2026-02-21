@@ -1,0 +1,26 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click",      "x": 95,  "y": 379},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "jump-overview"},
+
+    {"action": "click",      "x": 215, "y": 379},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "jump-details"},
+
+    {"action": "click",      "x": 335, "y": 379},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "jump-history"},
+
+    {"action": "click",      "x": 90,  "y": 258},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "tbb-day"},
+
+    {"action": "click",      "x": 190, "y": 258},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "tbb-week"}
+  ]
+}

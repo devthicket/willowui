@@ -1,0 +1,42 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "initial-unsorted"},
+
+    {"action": "click",      "x": 176, "y": 100},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "name-asc"},
+
+    {"action": "click",      "x": 176, "y": 100},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "name-desc"},
+
+    {"action": "click",      "x": 176, "y": 100},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "name-reset"},
+
+    {"action": "click",      "x": 404, "y": 100},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "level-asc"},
+
+    {"action": "click",      "x": 404, "y": 100},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "level-desc"},
+
+    {"action": "click",      "x": 594, "y": 100},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "class-asc"},
+
+    {"action": "click",      "x": 594, "y": 100},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "class-desc"},
+
+    {"action": "click",      "x": 784, "y": 100},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "score-asc"},
+
+    {"action": "click",      "x": 784, "y": 100},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "score-desc"}
+  ]
+}

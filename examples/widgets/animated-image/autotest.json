@@ -1,0 +1,13 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+    {"action": "wait", "frames": 30},
+    {"action": "screenshot", "label": "mid-animation"},
+    {"action": "wait", "frames": 120},
+    {"action": "screenshot", "label": "after-once-complete"},
+    {"action": "click", "x": 555, "y": 155},
+    {"action": "wait", "frames": 30},
+    {"action": "screenshot", "label": "after-replay-click"}
+  ]
+}

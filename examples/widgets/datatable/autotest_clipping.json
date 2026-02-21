@@ -1,0 +1,24 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "clip-initial-bottom-row"},
+
+    {"action": "click",      "x": 115, "y": 59},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "clip-large-100-bottom-row"},
+
+    {"action": "drag",       "fromX": 868, "fromY": 120, "toX": 868, "toY": 200, "frames": 10},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "clip-large-scrolled-partial"},
+
+    {"action": "drag",       "fromX": 868, "fromY": 200, "toX": 868, "toY": 350, "frames": 10},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "clip-large-scrolled-more"},
+
+    {"action": "click",      "x": 53, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "drag",       "fromX": 868, "fromY": 120, "toX": 868, "toY": 180, "frames": 10},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "clip-roster-scrolled-partial"}
+  ]
+}

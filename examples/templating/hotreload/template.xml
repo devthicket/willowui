@@ -1,0 +1,15 @@
+<Panel layout="vbox" spacing="10" x="40" y="60">
+	<Label bind:text="title" />
+	<Panel layout="hbox" spacing="10">
+		<Label bind:text="statusText" />
+
+		<Button text="Increment" on:click="increment" />
+		<Button text="Reset" on:click="reset" />
+
+		<Panel ui:show="showExtra">
+			<Label text="Counter is above 3!" />
+		</Panel>
+		<Label text="Hi 1" />
+	</Panel>
+	<Label text="Hi 22" />
+</Panel>

@@ -1,0 +1,7 @@
+{
+  "steps": [
+    {"action": "screenshot", "label": "initial"},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "ready"}
+  ]
+}

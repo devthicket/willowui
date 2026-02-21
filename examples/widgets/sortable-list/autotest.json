@@ -1,0 +1,34 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "01-initial"},
+
+    {"action": "click",      "x": 150, "y": 129},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "02-select-second"},
+
+    {"action": "click",      "x": 150, "y": 197},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "03-select-fourth"},
+
+    {"action": "drag",       "fromX": 32, "fromY": 95, "toX": 32, "toY": 163, "frames": 15},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "04-after-drag-down"},
+
+    {"action": "drag",       "fromX": 32, "fromY": 265, "toX": 32, "toY": 95, "frames": 15},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "05-after-drag-up"},
+
+    {"action": "click",      "x": 400, "y": 95},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "06-loadout-select"},
+
+    {"action": "drag",       "fromX": 505, "fromY": 95, "toX": 505, "toY": 163, "frames": 12},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "07-loadout-drag"},
+
+    {"action": "click",      "x": 150, "y": 95},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "08-final"}
+  ]
+}

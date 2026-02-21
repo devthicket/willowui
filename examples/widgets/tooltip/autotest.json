@@ -1,0 +1,38 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "move", "x": 99, "y": 93},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "hover-below"},
+
+    {"action": "move", "x": 269, "y": 93},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "hover-above"},
+
+    {"action": "move", "x": 439, "y": 93},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "hover-right"},
+
+    {"action": "move", "x": 124, "y": 281},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "follow-mouse"},
+
+    {"action": "move", "x": 74, "y": 387},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "shared-crimson"},
+
+    {"action": "move", "x": 194, "y": 387},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "shared-jade"},
+
+    {"action": "click", "x": 294, "y": 479},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "programmatic-show"},
+
+    {"action": "click", "x": 294, "y": 479},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "programmatic-hide"}
+  ]
+}

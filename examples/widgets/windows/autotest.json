@@ -1,0 +1,30 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click", "x": 200, "y": 150},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "click-form-window"},
+
+    {"action": "click", "x": 500, "y": 200},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "click-list-window"},
+
+    {"action": "click", "x": 350, "y": 450},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "click-about-window"},
+
+    {"action": "click", "x": 200, "y": 150},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "click-form-again"},
+
+    {"action": "drag", "fromX": 200, "fromY": 75, "toX": 100, "toY": 120, "frames": 10},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-drag-form-window"},
+
+    {"action": "click", "x": 630, "y": 95},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "after-close-list-window"}
+  ]
+}

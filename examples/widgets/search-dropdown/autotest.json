@@ -1,0 +1,42 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "01-initial"},
+
+    {"action": "click",      "x": 240, "y": 110},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "02-focused"},
+
+    {"action": "type",       "text": "po"},
+    {"action": "wait",       "frames": 15},
+    {"action": "screenshot", "label": "03-dropdown-po"},
+
+    {"action": "key",        "key": "down"},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "04-arrow-down-1"},
+
+    {"action": "key",        "key": "down"},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "05-arrow-down-2"},
+
+    {"action": "key",        "key": "enter"},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "06-selected-by-enter"},
+
+    {"action": "click",      "x": 403, "y": 110},
+    {"action": "wait",       "frames": 5},
+    {"action": "type",       "text": "eth"},
+    {"action": "wait",       "frames": 15},
+    {"action": "screenshot", "label": "07-dropdown-eth"},
+
+    {"action": "click",      "x": 100, "y": 147},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "08-selected-by-click"},
+
+    {"action": "type",       "text": "p"},
+    {"action": "wait",       "frames": 15},
+    {"action": "key",        "key": "escape"},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "09-dismissed-by-escape"}
+  ]
+}

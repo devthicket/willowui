@@ -1,0 +1,79 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click", "x": 120, "y": 102},
+    {"action": "wait", "frames": 3},
+    {"action": "click", "x": 300, "y": 102},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "background-interactive"},
+
+    {"action": "click", "x": 400, "y": 178},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "modal-open"},
+
+    {"action": "click", "x": 120, "y": 102},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "clicks-blocked-by-overlay"},
+
+    {"action": "click", "x": 346, "y": 330},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "modal-cancelled"},
+
+    {"action": "click", "x": 400, "y": 178},
+    {"action": "wait", "frames": 3},
+    {"action": "click", "x": 454, "y": 330},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "modal-confirmed"},
+
+    {"action": "click", "x": 424, "y": 260},
+    {"action": "wait", "frames": 3},
+    {"action": "click", "x": 400, "y": 178},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "modal-overlay-hidden"},
+
+    {"action": "click", "x": 120, "y": 102},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "clicks-still-blocked-invisible-overlay"},
+
+    {"action": "click", "x": 346, "y": 330},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "dismissed-restore-dim"},
+
+    {"action": "click", "x": 424, "y": 260},
+    {"action": "wait", "frames": 3},
+
+    {"action": "click", "x": 424, "y": 296},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "toggle-backdrop-click-on"},
+
+    {"action": "click", "x": 400, "y": 178},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "modal-backdrop-click-enabled"},
+
+    {"action": "click", "x": 100, "y": 450},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "dismissed-by-backdrop-click"},
+
+    {"action": "click", "x": 424, "y": 332},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "toggle-close-button-on"},
+
+    {"action": "click", "x": 400, "y": 178},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "modal-with-close-button"},
+
+    {"action": "click", "x": 424, "y": 368},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "toggle-movable-on"},
+
+    {"action": "drag", "fromX": 400, "fromY": 216, "toX": 480, "toY": 240, "frames": 10},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "modal-dragged"},
+
+    {"action": "click", "x": 426, "y": 354},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "final-cancelled"}
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click",      "x": 200, "y": 100},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "textinput-focused"},
+
+    {"action": "type",       "text": "a"},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "after-type-a"},
+
+    {"action": "click",      "x": 120, "y": 140},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "name-set"},
+
+    {"action": "click",      "x": 250, "y": 140},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "name-cleared"},
+
+    {"action": "click",      "x": 100, "y": 324},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "body-sample-loaded"},
+
+    {"action": "click",      "x": 170, "y": 324},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "body-cleared"}
+  ]
+}

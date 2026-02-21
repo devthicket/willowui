@@ -1,0 +1,79 @@
+{
+  "steps": [
+    {"action": "screenshot", "label": "01-initial"},
+
+    {"action": "click", "x": 129, "y": 94},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "02-info-toast"},
+
+    {"action": "click", "x": 624, "y": 525},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "03-click-dismissed"},
+
+    {"action": "click", "x": 129, "y": 138},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "04-success-toast"},
+
+    {"action": "click", "x": 129, "y": 182},
+    {"action": "wait", "frames": 15},
+    {"action": "screenshot", "label": "05-two-stacked"},
+
+    {"action": "click", "x": 129, "y": 226},
+    {"action": "wait", "frames": 15},
+    {"action": "screenshot", "label": "06-three-stacked"},
+
+    {"action": "click", "x": 365, "y": 138},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "07-dismiss-all-clear"},
+
+    {"action": "click", "x": 365, "y": 94},
+    {"action": "wait", "frames": 25},
+    {"action": "screenshot", "label": "08-spam-four"},
+
+    {"action": "click", "x": 365, "y": 138},
+    {"action": "wait", "frames": 20},
+
+    {"action": "click", "x": 129, "y": 344},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "09-no-click-dismiss-visible"},
+
+    {"action": "click", "x": 624, "y": 525},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "10-no-click-dismiss-still-visible"},
+
+    {"action": "wait", "frames": 180},
+    {"action": "screenshot", "label": "11-no-click-dismiss-auto-expired"},
+
+    {"action": "click", "x": 129, "y": 300},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "12-progress-bar-full"},
+
+    {"action": "wait", "frames": 120},
+    {"action": "screenshot", "label": "13-progress-bar-shrunk"},
+
+    {"action": "wait", "frames": 180},
+
+    {"action": "click", "x": 129, "y": 432},
+    {"action": "wait", "frames": 15},
+    {"action": "screenshot", "label": "14-short-1s-visible"},
+
+    {"action": "wait", "frames": 70},
+    {"action": "screenshot", "label": "15-short-1s-auto-dismissed"},
+
+    {"action": "click", "x": 365, "y": 256},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "16-anchor-bottom-left"},
+
+    {"action": "wait", "frames": 180},
+
+    {"action": "click", "x": 365, "y": 300},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "17-anchor-top-right"},
+
+    {"action": "wait", "frames": 180},
+
+    {"action": "click", "x": 365, "y": 344},
+    {"action": "wait", "frames": 20},
+    {"action": "screenshot", "label": "18-anchor-top-left"}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click",      "x": 176, "y": 132},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "row-0-selected"},
+
+    {"action": "click",      "x": 176, "y": 216},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "row-3-selected"},
+
+    {"action": "click",      "x": 176, "y": 384},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "row-9-selected"},
+
+    {"action": "click",      "x": 672, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "selection-cleared"}
+  ]
+}

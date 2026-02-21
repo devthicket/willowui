@@ -1,0 +1,19 @@
+<Panel layout="vbox" spacing="16" paddingTop="16" paddingRight="24" paddingBottom="16" paddingLeft="24">
+	<Label bind:text="title" fontSize="20" />
+
+	<Panel layout="vbox" spacing="8">
+		<Label text="Rate this item:" />
+		<StarRating name="rating1" maxStars="5" bind:value="rating" on:change="onRatingChange" />
+		<Label bind:text="ratingText" />
+	</Panel>
+
+	<Panel layout="hbox" spacing="12">
+		<Button text="Reset" on:click="reset" />
+		<Button text="Set to 3" on:click="setThree" />
+	</Panel>
+
+	<Panel layout="vbox" spacing="8">
+		<Label text="Readonly (bound to same value):" />
+		<StarRating name="rating2" maxStars="5" bind:value="rating" />
+	</Panel>
+</Panel>

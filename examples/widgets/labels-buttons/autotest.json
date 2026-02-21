@@ -1,0 +1,47 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click",      "x": 320, "y": 96},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "after-cycle-1"},
+
+    {"action": "click",      "x": 320, "y": 96},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "after-cycle-2"},
+
+    {"action": "click",      "x": 105, "y": 256},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "after-increment-1"},
+
+    {"action": "click",      "x": 105, "y": 256},
+    {"action": "click",      "x": 105, "y": 256},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "after-increment-3"},
+
+    {"action": "click",      "x": 225, "y": 256},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "after-reset"},
+
+    {"action": "click",      "x": 105, "y": 256},
+    {"action": "click",      "x": 105, "y": 256},
+    {"action": "click",      "x": 105, "y": 256},
+    {"action": "click",      "x": 105, "y": 256},
+    {"action": "click",      "x": 105, "y": 256},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "bind-enabled-at-5"},
+
+    {"action": "click",      "x": 105, "y": 256},
+    {"action": "click",      "x": 105, "y": 256},
+    {"action": "click",      "x": 105, "y": 256},
+    {"action": "click",      "x": 105, "y": 256},
+    {"action": "click",      "x": 105, "y": 256},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "bind-visible-done"},
+
+    {"action": "click",      "x": 225, "y": 336},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "bind-reset"}
+  ]
+}

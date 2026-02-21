@@ -1,0 +1,23 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 15},
+    {"action": "screenshot", "label": "01-initial"},
+    {"action": "click", "x": 36, "y": 32},
+    {"action": "wait", "frames": 60},
+    {"action": "screenshot", "label": "02-left-open"},
+    {"action": "click", "x": 600, "y": 300},
+    {"action": "wait", "frames": 60},
+    {"action": "screenshot", "label": "03-left-closed-via-backdrop"},
+    {"action": "click", "x": 752, "y": 32},
+    {"action": "wait", "frames": 60},
+    {"action": "screenshot", "label": "04-right-open"},
+    {"action": "click", "x": 300, "y": 300},
+    {"action": "wait", "frames": 60},
+    {"action": "screenshot", "label": "05-right-closed"},
+    {"action": "click", "x": 36, "y": 32},
+    {"action": "wait", "frames": 60},
+    {"action": "click", "x": 180, "y": 20},
+    {"action": "wait", "frames": 30},
+    {"action": "screenshot", "label": "06-pinned"}
+  ]
+}

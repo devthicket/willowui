@@ -1,0 +1,36 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "roster-25-rows"},
+
+    {"action": "click",      "x": 115, "y": 59},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "large-100-rows"},
+
+    {"action": "click",      "x": 174, "y": 59},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "empty-dataset"},
+
+    {"action": "click",      "x": 53,  "y": 59},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "back-to-roster"},
+
+    {"action": "click",      "x": 115, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "click",      "x": 292, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "large-filter-mages"},
+
+    {"action": "click",      "x": 176, "y": 100},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "large-mages-sorted-name-asc"},
+
+    {"action": "click",      "x": 784, "y": 100},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "large-mages-sorted-score-asc"},
+
+    {"action": "click",      "x": 238, "y": 59},
+    {"action": "wait",       "frames": 3},
+    {"action": "screenshot", "label": "large-all-sorted-score"}
+  ]
+}

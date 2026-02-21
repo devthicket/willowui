@@ -1,0 +1,33 @@
+{
+  "steps": [
+    {"action": "screenshot", "label": "01-initial"},
+
+    {"action": "click", "x": 70, "y": 503},
+    {"action": "wait", "frames": 4},
+    {"action": "screenshot", "label": "02-expanded"},
+
+    {"action": "click", "x": 170, "y": 122},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "03-folder-selected-leaf-only-off"},
+
+    {"action": "click", "x": 44, "y": 538},
+    {"action": "wait", "frames": 8},
+    {"action": "screenshot", "label": "04-leaf-only-on-folder-deselected"},
+
+    {"action": "click", "x": 170, "y": 122},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "05-folder-collapsed-not-selected"},
+
+    {"action": "click", "x": 170, "y": 234},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "06-leaf-selected"},
+
+    {"action": "click", "x": 44, "y": 538},
+    {"action": "wait", "frames": 8},
+    {"action": "screenshot", "label": "07-leaf-only-off"},
+
+    {"action": "click", "x": 170, "y": 150},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "08-folder-selectable-again"}
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "show_cursor": true,
+  "steps": [
+    {"action": "move", "x": -5, "y": [-5, 245]},
+
+    {"action": "wait", "ms": 500},
+    {"action": "start_gif", "label": "sortable-list", "x": 0, "y": 0, "width": 320, "height": 240, "maxWidth": 320, "maxHeight": 240, "fps": 30, "dropEvery": 1, "noDedup": true, "noDiff": true, "noDownscale": true},
+
+    {"action": "wait", "ms": 300},
+
+    {"action": "move", "x": 52, "y": 44, "tween": 300},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 400},
+    {"action": "drag", "fromX": 52, "fromY": 44, "toX": 52, "toY": 100, "ms": 600},
+    {"action": "wait", "ms": 500},
+
+    {"action": "move", "x": 52, "y": 128, "tween": 200},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 400},
+    {"action": "drag", "fromX": 52, "fromY": 128, "toX": 52, "toY": 58, "ms": 600},
+    {"action": "wait", "ms": 500},
+
+    {"action": "move", "x": -5, "y": [-5, 245], "tween": 300},
+    {"action": "wait", "ms": 300},
+
+    {"action": "stop_gif"}
+  ]
+}

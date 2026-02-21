@@ -1,0 +1,40 @@
+{
+  "show_cursor": true,
+  "steps": [
+    {"action": "move", "x": -5, "y": [-5, 245]},
+
+    {"action": "wait", "ms": 500},
+    {"action": "start_gif", "label": "toggle-button-bar", "x": 0, "y": 0, "width": 320, "height": 240, "maxWidth": 320, "maxHeight": 240, "fps": 30, "dropEvery": 1, "noDedup": true, "noDiff": true, "noDownscale": true},
+
+    {"action": "wait", "ms": 300},
+
+    {"action": "move", "x": 160, "y": 120, "tween": 300},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 150},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 200},
+    {"action": "move", "x": [40, 280], "y": [40, 100], "tween": 200},
+    {"action": "wait", "ms": 400},
+
+    {"action": "move", "x": 240, "y": 120, "tween": 200},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 150},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 200},
+    {"action": "move", "x": [40, 280], "y": [140, 220], "tween": 200},
+    {"action": "wait", "ms": 400},
+
+    {"action": "move", "x": 80, "y": 120, "tween": 200},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 150},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 200},
+    {"action": "move", "x": 325, "y": [-5, 245], "tween": 300},
+    {"action": "wait", "ms": 300},
+
+    {"action": "stop_gif"}
+  ]
+}

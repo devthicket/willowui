@@ -1,0 +1,269 @@
+<Panel layout="vbox" padding="0">
+    <TabBar size="752,590">
+
+        <!-- Stacks tab -->
+        <Tab label="Stacks" layout="hbox" spacing="16" padding="12">
+
+            <!-- Left column: VBox + HBox -->
+            <Panel layout="vbox" spacing="12">
+                <Label text="VBox -- Vertical Stack" color="#7ab3ff" />
+                <Panel layout="vbox" spacing="6" padding="10"
+                       background="#1a1c22" cornerRadius="6">
+                    <Button text="Top" width="330" height="36" />
+                    <Button text="Middle" width="330" height="36" variant="neutral" />
+                    <Button text="Bottom" width="330" height="36" />
+                </Panel>
+
+                <Label text="HBox -- Horizontal Stack" color="#7ab3ff" />
+                <Panel layout="hbox" spacing="6" padding="10"
+                       background="#1a1c22" cornerRadius="6">
+                    <Button text="Left" size="100,36" />
+                    <Button text="Center" size="100,36" variant="neutral" />
+                    <Button text="Right" size="100,36" />
+                </Panel>
+
+                <Label text="Spacing -- 0px vs 10px vs 20px" color="#7ab3ff" />
+                <Panel layout="hbox" spacing="16" padding="10"
+                       background="#1a1c22" cornerRadius="6">
+                    <Panel layout="vbox" spacing="0">
+                        <Label text="spacing=0" color="#888888" />
+                        <Button text="A" size="80,30" />
+                        <Button text="B" size="80,30" />
+                        <Button text="C" size="80,30" />
+                    </Panel>
+                    <Panel layout="vbox" spacing="10">
+                        <Label text="spacing=10" color="#888888" />
+                        <Button text="A" size="80,30" />
+                        <Button text="B" size="80,30" />
+                        <Button text="C" size="80,30" />
+                    </Panel>
+                    <Panel layout="vbox" spacing="20">
+                        <Label text="spacing=20" color="#888888" />
+                        <Button text="A" size="80,30" />
+                        <Button text="B" size="80,30" />
+                        <Button text="C" size="80,30" />
+                    </Panel>
+                </Panel>
+            </Panel>
+
+            <!-- Right column: Nested -->
+            <Panel layout="vbox" spacing="12">
+                <Label text="Nested -- HBox rows in a VBox" color="#7ab3ff" />
+                <Panel layout="vbox" spacing="6" padding="10"
+                       background="#1a1c22" cornerRadius="6">
+                    <Panel layout="hbox" spacing="6">
+                        <Button text="A1" size="100,36" variant="primary" />
+                        <Button text="A2" size="100,36" variant="primary" />
+                        <Button text="A3" size="100,36" variant="primary" />
+                    </Panel>
+                    <Panel layout="hbox" spacing="6">
+                        <Button text="B1" size="100,36" variant="success" />
+                        <Button text="B2" size="100,36" variant="success" />
+                        <Button text="B3" size="100,36" variant="success" />
+                    </Panel>
+                    <Panel layout="hbox" spacing="6">
+                        <Button text="C1" size="100,36" variant="danger" />
+                        <Button text="C2" size="100,36" variant="danger" />
+                        <Button text="C3" size="100,36" variant="danger" />
+                    </Panel>
+                </Panel>
+
+                <Label text="Nested -- VBox cols in an HBox" color="#7ab3ff" />
+                <Panel layout="hbox" spacing="6" padding="10"
+                       background="#1a1c22" cornerRadius="6">
+                    <Panel layout="vbox" spacing="4">
+                        <Button text="X1" size="100,30" variant="primary" />
+                        <Button text="X2" size="100,30" variant="primary" />
+                        <Button text="X3" size="100,30" variant="primary" />
+                    </Panel>
+                    <Panel layout="vbox" spacing="4">
+                        <Button text="Y1" size="100,30" variant="success" />
+                        <Button text="Y2" size="100,30" variant="success" />
+                        <Button text="Y3" size="100,30" variant="success" />
+                    </Panel>
+                    <Panel layout="vbox" spacing="4">
+                        <Button text="Z1" size="100,30" variant="danger" />
+                        <Button text="Z2" size="100,30" variant="danger" />
+                        <Button text="Z3" size="100,30" variant="danger" />
+                    </Panel>
+                </Panel>
+            </Panel>
+        </Tab>
+
+        <!-- Grid tab -->
+        <Tab label="Grid" layout="vbox" spacing="12" padding="12">
+            <Label text="Grid -- 3 Columns" color="#7ab3ff" />
+            <Panel layout="grid" gridColumns="3" spacing="6" padding="10"
+                   background="#1a1c22" cornerRadius="6">
+                <Button text="1" size="210,50" />
+                <Button text="2" size="210,50" variant="neutral" />
+                <Button text="3" size="210,50" />
+                <Button text="4" size="210,50" variant="neutral" />
+                <Button text="5" size="210,50" />
+                <Button text="6" size="210,50" variant="neutral" />
+            </Panel>
+
+            <Label text="Grid -- 4 Columns" color="#7ab3ff" />
+            <Panel layout="grid" gridColumns="4" spacing="6" padding="10"
+                   background="#1a1c22" cornerRadius="6">
+                <Button text="Slot 1" size="155,44" variant="primary" />
+                <Button text="Slot 2" size="155,44" variant="success" />
+                <Button text="Slot 3" size="155,44" variant="danger" />
+                <Button text="Slot 4" size="155,44" variant="warning" />
+                <Button text="Slot 5" size="155,44" variant="primary" />
+                <Button text="Slot 6" size="155,44" variant="success" />
+                <Button text="Slot 7" size="155,44" variant="danger" />
+                <Button text="Slot 8" size="155,44" variant="warning" />
+            </Panel>
+
+            <Label text="Grid -- 6 Columns (compact)" color="#7ab3ff" />
+            <Panel layout="grid" gridColumns="6" spacing="4" padding="10"
+                   background="#1a1c22" cornerRadius="6">
+                <Button text="1" size="104,40" />
+                <Button text="2" size="104,40" />
+                <Button text="3" size="104,40" />
+                <Button text="4" size="104,40" />
+                <Button text="5" size="104,40" />
+                <Button text="6" size="104,40" />
+                <Button text="7" size="104,40" />
+                <Button text="8" size="104,40" />
+                <Button text="9" size="104,40" />
+                <Button text="10" size="104,40" />
+                <Button text="11" size="104,40" />
+                <Button text="12" size="104,40" />
+            </Panel>
+
+            <Label text="Grid -- 2 Columns (form layout)" color="#7ab3ff" />
+            <Panel layout="grid" gridColumns="2" spacing="8" padding="10"
+                   background="#1a1c22" cornerRadius="6">
+                <Label text="Name:" color="#cccccc" />
+                <TextInput width="300" placeholder="Enter name..." />
+                <Label text="Email:" color="#cccccc" />
+                <TextInput width="300" placeholder="Enter email..." />
+                <Label text="Level:" color="#cccccc" />
+                <NumberStepper size="120,32" min="1" max="100" value="1" />
+            </Panel>
+        </Tab>
+
+        <!-- Alignment tab -->
+        <Tab label="Alignment" layout="vbox" spacing="12" padding="12">
+            <Label text="VBox Alignment -- align (cross-axis)" color="#7ab3ff" />
+            <Panel layout="hbox" spacing="10">
+                <Panel layout="vbox" spacing="4" padding="8" size="210,140"
+                       background="#1a1c22" cornerRadius="6" align="start">
+                    <Label text="align=start" color="#888888" />
+                    <Button text="Short" size="80,30" />
+                    <Button text="Medium Btn" size="120,30" />
+                    <Button text="Longer Button" size="160,30" />
+                </Panel>
+                <Panel layout="vbox" spacing="4" padding="8" size="210,140"
+                       background="#1a1c22" cornerRadius="6" align="center">
+                    <Label text="align=center" color="#888888" />
+                    <Button text="Short" size="80,30" />
+                    <Button text="Medium Btn" size="120,30" />
+                    <Button text="Longer Button" size="160,30" />
+                </Panel>
+                <Panel layout="vbox" spacing="4" padding="8" size="210,140"
+                       background="#1a1c22" cornerRadius="6" align="end">
+                    <Label text="align=end" color="#888888" />
+                    <Button text="Short" size="80,30" />
+                    <Button text="Medium Btn" size="120,30" />
+                    <Button text="Longer Button" size="160,30" />
+                </Panel>
+            </Panel>
+
+            <Label text="VBox Justify -- justify (main-axis)" color="#7ab3ff" />
+            <Panel layout="hbox" spacing="10">
+                <Panel layout="vbox" spacing="4" padding="8" size="210,180"
+                       background="#1a1c22" cornerRadius="6" justify="start">
+                    <Label text="justify=start" color="#888888" />
+                    <Button text="A" size="80,30" />
+                    <Button text="B" size="80,30" />
+                </Panel>
+                <Panel layout="vbox" spacing="4" padding="8" size="210,180"
+                       background="#1a1c22" cornerRadius="6" justify="center">
+                    <Label text="justify=center" color="#888888" />
+                    <Button text="A" size="80,30" />
+                    <Button text="B" size="80,30" />
+                </Panel>
+                <Panel layout="vbox" spacing="4" padding="8" size="210,180"
+                       background="#1a1c22" cornerRadius="6" justify="end">
+                    <Label text="justify=end" color="#888888" />
+                    <Button text="A" size="80,30" />
+                    <Button text="B" size="80,30" />
+                </Panel>
+            </Panel>
+
+            <Label text="Padding -- inset spacing inside containers" color="#7ab3ff" />
+            <Panel layout="hbox" spacing="10">
+                <Panel layout="vbox" spacing="4" padding="4" size="210,100"
+                       background="#1a1c22" cornerRadius="6">
+                    <Label text="padding=4" color="#888888" />
+                    <Button text="Tight" size="190,30" />
+                </Panel>
+                <Panel layout="vbox" spacing="4" padding="16" size="210,100"
+                       background="#1a1c22" cornerRadius="6">
+                    <Label text="padding=16" color="#888888" />
+                    <Button text="Normal" size="170,30" />
+                </Panel>
+                <Panel layout="vbox" spacing="4" padding="32" size="210,100"
+                       background="#1a1c22" cornerRadius="6">
+                    <Label text="padding=32" color="#888888" />
+                    <Button text="Roomy" size="140,30" />
+                </Panel>
+            </Panel>
+        </Tab>
+
+        <!-- Anchor tab -->
+        <Tab label="Anchor" layout="vbox" padding="12">
+            <Panel name="hud" layout="anchor" size="700,420" background="#1a1c22" cornerRadius="6" padding="10">
+
+                <!-- Top row -->
+                <Panel anchor="top-left" size="160,50" background="#2a4a8a" cornerRadius="4" layout="vbox" padding="8">
+                    <Label text="Top-Left" color="#7ab3ff" />
+                    <Label text="Health Bar" color="#888888" />
+                </Panel>
+
+                <Panel anchor="top-center" size="140,40" background="#2a4a8a" cornerRadius="4" layout="vbox" padding="8">
+                    <Label text="Top-Center" color="#7ab3ff" />
+                </Panel>
+
+                <Panel anchor="top-right" size="120,120" background="#2a4a8a" cornerRadius="4" layout="vbox" padding="8">
+                    <Label text="Top-Right" color="#7ab3ff" />
+                    <Label text="Minimap" color="#888888" />
+                </Panel>
+
+                <!-- Middle row -->
+                <Panel anchor="middle-left" size="140,80" background="#2a6a3a" cornerRadius="4" layout="vbox" padding="8">
+                    <Label text="Middle-Left" color="#7aff7a" />
+                    <Label text="Quests" color="#888888" />
+                </Panel>
+
+                <Panel anchor="center" size="160,60" background="#6a2a6a" cornerRadius="4" layout="vbox" padding="8">
+                    <Label text="Center" color="#dd88ff" />
+                    <Label text="Notification" color="#888888" />
+                </Panel>
+
+                <Panel anchor="middle-right" size="120,70" background="#2a6a3a" cornerRadius="4" layout="vbox" padding="8">
+                    <Label text="Middle-Right" color="#7aff7a" />
+                    <Label text="Buffs" color="#888888" />
+                </Panel>
+
+                <!-- Bottom row -->
+                <Panel anchor="bottom-left" size="200,70" background="#6a5a2a" cornerRadius="4" layout="vbox" padding="8">
+                    <Label text="Bottom-Left" color="#ffcc44" />
+                    <Label text="Chat Log" color="#888888" />
+                </Panel>
+
+                <Panel anchor="bottom-center" size="260,50" background="#6a5a2a" cornerRadius="4" layout="vbox" padding="8">
+                    <Label text="Bottom-Center -- Action Bar" color="#ffcc44" />
+                </Panel>
+
+                <Panel anchor="bottom-right" size="130,40" background="#6a5a2a" cornerRadius="4" layout="vbox" padding="8">
+                    <Label text="Bottom-Right" color="#ffcc44" />
+                </Panel>
+            </Panel>
+        </Tab>
+
+    </TabBar>
+</Panel>

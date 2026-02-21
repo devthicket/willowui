@@ -1,0 +1,49 @@
+{
+  "show_cursor": true,
+  "steps": [
+    {"action": "move", "x": [-5, 325], "y": 245},
+
+    {"action": "wait", "ms": 500},
+    {"action": "start_gif", "label": "time-picker", "x": 0, "y": 0, "width": 320, "height": 240, "maxWidth": 320, "maxHeight": 240, "fps": 30, "dropEvery": 1, "noDedup": true, "noDiff": true, "noDownscale": true},
+
+    {"action": "wait", "ms": 300},
+
+    {"action": "move", "x": 110, "y": 82, "tween": 300},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 150},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 300},
+
+    {"action": "press_down"},
+    {"action": "wait", "ms": 150},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 300},
+
+    {"action": "move", "x": 195, "y": 82, "tween": 200},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 150},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 300},
+
+    {"action": "move", "x": 195, "y": 158, "tween": 200},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 150},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 300},
+
+    {"action": "move", "x": 265, "y": 120, "tween": 200},
+    {"action": "wait", "ms": 200},
+    {"action": "press_down"},
+    {"action": "wait", "ms": 150},
+    {"action": "press_up"},
+    {"action": "wait", "ms": 500},
+
+    {"action": "move", "x": [-5, 325], "y": 245, "tween": 300},
+    {"action": "wait", "ms": 300},
+
+    {"action": "stop_gif"}
+  ]
+}

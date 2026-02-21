@@ -1,0 +1,26 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "menu"},
+    {"action": "click", "x": 100, "y": 243},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "settings"},
+    {"action": "click", "x": 183, "y": 92},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "settings-music-off"},
+    {"action": "click", "x": 80, "y": 233},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "back-to-menu"},
+    {"action": "click", "x": 256, "y": 243},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "game-screen"},
+    {"action": "click", "x": 150, "y": 206},
+    {"action": "wait", "frames": 5},
+    {"action": "click", "x": 150, "y": 206},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "game-scored"},
+    {"action": "click", "x": 130, "y": 261},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "back-to-menu-final"}
+  ]
+}

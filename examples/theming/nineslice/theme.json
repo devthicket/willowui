@@ -1,0 +1,73 @@
+{
+    "components": {
+        "_": {
+            "borderWidth": 1,
+            "cornerRadius": 4
+        },
+        "button": {
+            "primary": {
+                "backgroundGrid": {
+                    "default": "button_default",
+                    "hover": "button_default",
+                    "active": "button_default"
+                },
+                "backgroundColor": {
+                    "disabled": "rgba(115, 115, 122, 0.6)"
+                },
+                "textColor": {
+                    "default": "#EEEEEE",
+                    "disabled": "rgba(238, 238, 238, 0.4)"
+                },
+                "borderColor": {
+                    "default": "#4D4D54",
+                    "focus": "#59A6FF"
+                },
+                "padding": { "top": 8, "right": 16, "bottom": 8, "left": 16 }
+            },
+            "accent": {
+                "backgroundColor": {
+                    "default": "#D43A3A",
+                    "hover": "#E04848",
+                    "active": "#B02828",
+                    "disabled": "rgba(115, 115, 122, 0.6)"
+                },
+                "textColor": {
+                    "default": "#FFFFFF",
+                    "disabled": "rgba(255, 255, 255, 0.4)"
+                },
+                "borderColor": {
+                    "default": "#4D4D54",
+                    "focus": "#FF6666"
+                },
+                "padding": { "top": 8, "right": 16, "bottom": 8, "left": 16 }
+            }
+        },
+        "label": {
+            "primary": {
+                "textColor": {
+                    "default": "#EEEEEE",
+                    "disabled": "rgba(238, 238, 238, 0.4)"
+                }
+            }
+        },
+        "panel": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "#262629"
+                }
+            }
+        }
+    },
+    "nine-grids": {
+        "button_default": {
+            "source": "button_bg.png",
+            "innerRegion": { "x": 8, "y": 8, "width": 32, "height": 32 },
+            "auto-slice": {
+                "top": 8,
+                "right": 8,
+                "bottom": 8,
+                "left": 8
+            }
+        }
+    }
+}

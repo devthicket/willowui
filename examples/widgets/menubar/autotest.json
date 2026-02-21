@@ -1,0 +1,18 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "mb-initial"},
+    {"action": "click", "x": 20, "y": 16},
+    {"action": "wait", "frames": 8},
+    {"action": "screenshot", "label": "mb-file-menu-open"},
+    {"action": "move", "x": 60, "y": 16},
+    {"action": "wait", "frames": 8},
+    {"action": "screenshot", "label": "mb-edit-hover-switch"},
+    {"action": "click", "x": 60, "y": 120},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "mb-after-cut-selected"},
+    {"action": "click", "x": 105, "y": 16},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "mb-view-menu-open"}
+  ]
+}

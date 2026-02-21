@@ -1,0 +1,6 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "richtext-demo"}
+  ]
+}

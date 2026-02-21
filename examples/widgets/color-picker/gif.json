@@ -1,0 +1,90 @@
+{
+  "steps": [
+    {
+      "action": "wait",
+      "frames": 30
+    },
+    {
+      "action": "start_gif",
+      "label": "color-picker",
+      "x": 20,
+      "y": 50,
+      "width": 480,
+      "height": 360,
+      "maxWidth": 320,
+      "maxHeight": 240,
+      "fps": 20,
+      "dropEvery": 2
+    },
+    {
+      "action": "wait",
+      "frames": 20
+    },
+    {
+      "action": "click",
+      "x": 100,
+      "y": 90
+    },
+    {
+      "action": "wait",
+      "frames": 40
+    },
+    {
+      "action": "click",
+      "x": 150,
+      "y": 200
+    },
+    {
+      "action": "wait",
+      "frames": 20
+    },
+    {
+      "action": "click",
+      "x": 260,
+      "y": 370
+    },
+    {
+      "action": "wait",
+      "frames": 20
+    },
+    {
+      "action": "click",
+      "x": 175,
+      "y": 370
+    },
+    {
+      "action": "wait",
+      "frames": 20
+    },
+    {
+      "action": "click",
+      "x": 430,
+      "y": 370
+    },
+    {
+      "action": "wait",
+      "frames": 20
+    },
+    {
+      "action": "click",
+      "x": 430,
+      "y": 430
+    },
+    {
+      "action": "wait",
+      "frames": 30
+    },
+    {
+      "action": "click",
+      "x": 240,
+      "y": 170
+    },
+    {
+      "action": "wait",
+      "frames": 40
+    },
+    {
+      "action": "stop_gif"
+    }
+  ]
+}

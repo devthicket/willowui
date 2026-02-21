@@ -1,0 +1,8 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 10},
+    {"action": "start_gif", "label": "tooltip", "x": 0, "y": 20, "width": 320, "height": 240, "maxWidth": 320, "maxHeight": 240, "fps": 20, "dropEvery": 2},
+    {"action": "wait", "frames": 300},
+    {"action": "stop_gif"}
+  ]
+}

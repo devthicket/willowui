@@ -1,0 +1,34 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click", "x": 120, "y": 150},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-list-click"},
+
+    {"action": "click", "x": 500, "y": 150},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-tile-click"},
+
+    {"action": "click", "x": 120, "y": 430},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-tree-click"},
+
+    {"action": "drag", "fromX": 254, "fromY": 72, "toX": 254, "toY": 200, "frames": 30},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "after-list-scroll-drag"},
+
+    {"action": "drag", "fromX": 254, "fromY": 200, "toX": 254, "toY": 280, "frames": 15},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "after-list-scroll-more"},
+
+    {"action": "click", "x": 370, "y": 348},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "tab-settings"},
+
+    {"action": "click", "x": 440, "y": 348},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "tab-about"}
+  ]
+}

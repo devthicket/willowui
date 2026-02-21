@@ -1,0 +1,53 @@
+{
+  "steps": [
+    {"action": "screenshot", "label": "01-initial"},
+
+    {"action": "click", "x": 264, "y": 96},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "02-resolution-open"},
+
+    {"action": "click", "x": 220, "y": 131},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "03-resolution-selected-hd"},
+
+    {"action": "click", "x": 264, "y": 138},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "04-quality-open"},
+
+    {"action": "click", "x": 220, "y": 130},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "05-quality-selected-low"},
+
+    {"action": "click", "x": 264, "y": 180},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "06-language-open"},
+
+    {"action": "click", "x": 700, "y": 400},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "07-language-dismissed"},
+
+    {"action": "click", "x": 64, "y": 428},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "08-edit-menu-open"},
+
+    {"action": "click", "x": 64, "y": 448},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "09-undo-selected"},
+
+    {"action": "click", "x": 152, "y": 428},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "10-view-menu-open"},
+
+    {"action": "click", "x": 700, "y": 400},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "11-view-menu-dismissed"},
+
+    {"action": "click", "x": 244, "y": 428},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "12-insert-menu-open"},
+
+    {"action": "click", "x": 700, "y": 400},
+    {"action": "wait", "frames": 2},
+    {"action": "screenshot", "label": "13-insert-menu-dismissed"}
+  ]
+}

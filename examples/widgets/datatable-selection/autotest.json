@@ -1,0 +1,63 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 15},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click", "x": 50, "y": 530},
+    {"action": "wait", "frames": 15},
+    {"action": "screenshot", "label": "batch-checkboxes"},
+
+    {"action": "click", "x": 400, "y": 100},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "check-alice"},
+
+    {"action": "click", "x": 400, "y": 160},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "check-carol"},
+
+    {"action": "click", "x": 113, "y": 530},
+    {"action": "wait", "frames": 15},
+    {"action": "screenshot", "label": "switch-to-radio"},
+
+    {"action": "click", "x": 400, "y": 130},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "radio-bob"},
+
+    {"action": "click", "x": 400, "y": 220},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "radio-eve-bob-deselected"},
+
+    {"action": "click", "x": 113, "y": 530},
+    {"action": "wait", "frames": 10},
+    {"action": "click", "x": 50, "y": 530},
+    {"action": "wait", "frames": 15},
+    {"action": "screenshot", "label": "back-to-normal"},
+
+    {"action": "click", "x": 50, "y": 530},
+    {"action": "wait", "frames": 10},
+
+    {"action": "click", "x": 400, "y": 100},
+    {"action": "wait", "frames": 5},
+    {"action": "click", "x": 400, "y": 130},
+    {"action": "wait", "frames": 5},
+
+    {"action": "click", "x": 382, "y": 530},
+    {"action": "wait", "frames": 15},
+    {"action": "screenshot", "label": "archived-alice-bob"},
+
+    {"action": "click", "x": 400, "y": 100},
+    {"action": "wait", "frames": 5},
+    {"action": "click", "x": 382, "y": 530},
+    {"action": "wait", "frames": 15},
+    {"action": "screenshot", "label": "unarchived-alice"},
+
+    {"action": "click", "x": 400, "y": 160},
+    {"action": "wait", "frames": 5},
+    {"action": "click", "x": 400, "y": 190},
+    {"action": "wait", "frames": 5},
+
+    {"action": "click", "x": 452, "y": 530},
+    {"action": "wait", "frames": 15},
+    {"action": "screenshot", "label": "deleted-two-count-updated"}
+  ]
+}

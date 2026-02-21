@@ -1,0 +1,22 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "drag",       "fromX": 210, "fromY": 92, "toX": 330, "toY": 92, "frames": 15},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "slider-high"},
+
+    {"action": "drag",       "fromX": 330, "fromY": 92, "toX": 80, "toY": 92, "frames": 15},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "slider-low"},
+
+    {"action": "drag",       "fromX": 108, "fromY": 288, "toX": 220, "toY": 288, "frames": 10},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "min-adjusted"},
+
+    {"action": "drag",       "fromX": 200, "fromY": 288, "toX": 350, "toY": 288, "frames": 10},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "max-clamped"}
+  ]
+}

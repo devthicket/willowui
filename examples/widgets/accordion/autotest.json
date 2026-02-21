@@ -1,0 +1,38 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 20},
+    {"action": "screenshot", "label": "01-initial"},
+
+    {"action": "click",      "x": 194, "y": 193},
+    {"action": "wait",       "frames": 20},
+    {"action": "screenshot", "label": "02-exclusive-audio-expanded"},
+
+    {"action": "click",      "x": 194, "y": 90},
+    {"action": "wait",       "frames": 20},
+    {"action": "screenshot", "label": "03-exclusive-general-expanded"},
+
+    {"action": "click",      "x": 194, "y": 90},
+    {"action": "wait",       "frames": 20},
+    {"action": "screenshot", "label": "04-exclusive-all-collapsed"},
+
+    {"action": "click",      "x": 490, "y": 436},
+    {"action": "wait",       "frames": 20},
+    {"action": "screenshot", "label": "05-multi-open-all"},
+
+    {"action": "click",      "x": 660, "y": 436},
+    {"action": "wait",       "frames": 20},
+    {"action": "screenshot", "label": "06-multi-close-all"},
+
+    {"action": "click",      "x": 580, "y": 90},
+    {"action": "wait",       "frames": 20},
+    {"action": "screenshot", "label": "07-multi-q1-expanded"},
+
+    {"action": "click",      "x": 580, "y": 193},
+    {"action": "wait",       "frames": 20},
+    {"action": "screenshot", "label": "08-multi-q1-q2-expanded"},
+
+    {"action": "click",      "x": 580, "y": 296},
+    {"action": "wait",       "frames": 20},
+    {"action": "screenshot", "label": "09-multi-all-expanded"}
+  ]
+}

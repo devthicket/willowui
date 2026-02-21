@@ -1,0 +1,155 @@
+{
+    "colors": {
+        "bg":       "#1e1e2e",
+        "surface":  "#2a2a3c",
+        "fg":       "#e0e0f0",
+        "fg-dim":   "#808090",
+        "accent":   "#7c7caa",
+        "border":   "#3a3a4c"
+    },
+
+    "sprites": {
+        "checkmark":      { "src": "icons.png", "x":  0, "y": 0, "w": 11, "h": 11 },
+        "radio-dot":      { "src": "icons.png", "x": 16, "y": 1, "w":  8, "h":  8 },
+        "close-x":        { "src": "icons.png", "x": 28, "y": 0, "w": 11, "h": 11 },
+        "tree-expand":    { "src": "icons.png", "x": 44, "y": 1, "w":  9, "h":  9 },
+        "tree-collapse":  { "src": "icons.png", "x": 56, "y": 1, "w":  9, "h":  9 },
+        "resize-grip":    { "src": "icons.png", "x": 68, "y": 0, "w": 12, "h": 12 }
+    },
+
+    "components": {
+        "_": {
+            "cornerRadius": 4,
+            "borderWidth": 1
+        },
+        "checkbox": {
+            "primary": {
+                "checkIcon": "checkmark",
+                "boxColor": {
+                    "default": "$border",
+                    "hover":   "$accent",
+                    "active":  "$accent",
+                    "disabled": "#404050"
+                },
+                "checkColor": {
+                    "default":  "$fg",
+                    "selected": "$fg",
+                    "disabled": "$fg-dim"
+                },
+                "focusColor": {
+                    "focus": "$accent"
+                }
+            }
+        },
+        "radio": {
+            "primary": {
+                "dotIcon": "radio-dot",
+                "circleColor": {
+                    "default": "$border",
+                    "hover":   "$accent",
+                    "active":  "$accent",
+                    "disabled": "#404050"
+                },
+                "dotColor": {
+                    "default":  "$fg",
+                    "selected": "$fg",
+                    "disabled": "$fg-dim"
+                },
+                "cornerRadius": -1,
+                "focusColor": {
+                    "focus": "$accent"
+                }
+            }
+        },
+        "window": {
+            "primary": {
+                "closeIcon": "close-x",
+                "cornerRadius": 8,
+                "backgroundColor": {
+                    "default": "$surface"
+                },
+                "titleBackgroundColor": {
+                    "default": "$border",
+                    "focus":   "$accent"
+                },
+                "titleTextColor": {
+                    "default": "$fg"
+                },
+                "borderColor": {
+                    "default": "$border"
+                },
+                "resizeHandleColor": {
+                    "default": "$accent"
+                },
+                "resizeIcon": "resize-grip"
+            }
+        },
+        "treeList": {
+            "primary": {
+                "expandIcon":   "tree-expand",
+                "collapseIcon": "tree-collapse",
+                "backgroundColor": {
+                    "default": "$surface"
+                },
+                "itemBackgroundColor": {
+                    "hover":    "rgba(124, 124, 170, 0.2)",
+                    "selected": "rgba(124, 124, 170, 0.4)"
+                },
+                "textColor": {
+                    "default": "$fg",
+                    "disabled": "$fg-dim"
+                },
+                "borderColor": {
+                    "default": "$border"
+                }
+            }
+        },
+        "label": {
+            "primary": {
+                "textColor": {
+                    "default": "$fg",
+                    "disabled": "$fg-dim"
+                }
+            }
+        },
+        "panel": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$surface"
+                }
+            }
+        },
+        "button": {
+            "primary": {
+                "backgroundColor": {
+                    "default": "$accent",
+                    "hover": "#9090c0",
+                    "active": "#6060a0",
+                    "disabled": "#404050"
+                },
+                "textColor": {
+                    "default": "#ffffff",
+                    "disabled": "$fg-dim"
+                },
+                "borderColor": {
+                    "default": "$border"
+                }
+            },
+            "custom1": {
+                "backgroundColor": {
+                    "default": "#00000000",
+                    "hover": "rgba(255, 255, 255, 0.1)",
+                    "active": "rgba(255, 255, 255, 0.2)"
+                },
+                "textColor": {
+                    "default": "$fg",
+                    "hover": "#ffffff",
+                    "active": "#ffffff"
+                },
+                "borderColor": {
+                    "default": "#00000000"
+                }
+            }
+        }
+    }
+}

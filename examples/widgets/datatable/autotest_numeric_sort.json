@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "numeric-unsorted"},
+
+    {"action": "click",      "x": 404, "y": 100},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "numeric-level-asc"},
+
+    {"action": "click",      "x": 404, "y": 100},
+    {"action": "wait",       "frames": 5},
+    {"action": "screenshot", "label": "numeric-level-desc"}
+  ]
+}

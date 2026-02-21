@@ -1,0 +1,15 @@
+{
+  "steps": [
+    {"action": "screenshot", "label": "initial"},
+    {"action": "wait", "frames": 100},
+    {"action": "screenshot", "label": "live-100-frames"},
+    {"action": "click", "x": 482, "y": 99},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "paused"},
+    {"action": "wait", "frames": 120},
+    {"action": "screenshot", "label": "paused-frozen"},
+    {"action": "click", "x": 482, "y": 99},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "reconnected"}
+  ]
+}

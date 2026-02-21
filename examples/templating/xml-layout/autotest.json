@@ -1,0 +1,15 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "tab-stacks"},
+    {"action": "click", "x": 111, "y": 68},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "tab-grid"},
+    {"action": "click", "x": 178, "y": 68},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "tab-alignment"},
+    {"action": "click", "x": 250, "y": 68},
+    {"action": "wait", "frames": 10},
+    {"action": "screenshot", "label": "tab-anchor"}
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "steps": [
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "initial"},
+
+    {"action": "click", "x": 60, "y": 76},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "after-toggle-on"},
+
+    {"action": "click", "x": 60, "y": 76},
+    {"action": "wait", "frames": 5},
+    {"action": "screenshot", "label": "after-toggle-off"},
+
+    {"action": "click", "x": 60, "y": 126},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-checkbox"},
+
+    {"action": "click", "x": 50, "y": 178},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-radio-a"},
+
+    {"action": "click", "x": 50, "y": 206},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-radio-b"},
+
+    {"action": "click", "x": 50, "y": 234},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-radio-c"},
+
+    {"action": "click", "x": 500, "y": 76},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-textinput-focus"},
+
+    {"action": "type", "text": "Hello WillowUI"},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-textinput-typed"},
+
+    {"action": "click", "x": 500, "y": 200},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-textarea-focus"},
+
+    {"action": "type", "text": "Line one"},
+    {"action": "wait", "frames": 2},
+    {"action": "key", "key": "enter"},
+    {"action": "wait", "frames": 2},
+    {"action": "type", "text": "Line two"},
+    {"action": "wait", "frames": 3},
+    {"action": "screenshot", "label": "after-textarea-typed"}
+  ]
+}
