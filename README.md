@@ -7,9 +7,7 @@
 
 A reactive UI toolkit for Go, built on [Willow](https://github.com/devthicket/willow) and [Ebitengine](https://ebitengine.org). WillowUI provides a complete widget library, reactive state management, JSON theming, and XML templating for building desktop and game UIs.
 
-> **[Read the full documentation at devthicket.org/willow-ui](https://www.devthicket.org/willow-ui)**
->
-> Guides, API reference, theming cookbook, and interactive examples.
+> **New here?** Check out the [WillowUI website](https://www.devthicket.org/willow-ui) for guides, examples, and everything you need to start building with WillowUI.
 
 **Status:** Actively developed. API may change before `v1.0.0`.
 
@@ -147,6 +145,12 @@ go run ./examples/templating/xml-basic/
 go run ./examples/theming/theme-gallery/
 ```
 
+## Documentation
+
+- **[WillowUI](https://www.devthicket.org/willow-ui)** -- Homepage, guides, and tutorials
+- **[Documentation](https://www.devthicket.org/willow-ui/docs)** -- In-depth guides and theming cookbook
+- **[API Reference](https://www.devthicket.org/willow-ui/api)** -- Full API documentation
+
 ## Built with
 
 - **Go** 1.24+
@@ -166,9 +170,3 @@ go vet ./...
 ## License
 
 [MIT](LICENSE)
-
----
-
-<p align="center">
-  <b><a href="https://www.devthicket.org/willow-ui">devthicket.org/willow-ui</a></b> -- Full documentation, guides, and interactive examples
-</p>
